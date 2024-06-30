@@ -1,0 +1,413 @@
+@font-face {
+  font-family: naruto;
+  src: url(616fd1dd00cf6c70f978fc69_Canopee.woff2);
+}
+
+@font-face {
+  font-family: sasuke;
+  src: url(5f242a694256f02b944d5767_EditorialNew-Light.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.full{
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+
+}
+
+.section1 {
+  height: auto;
+  width: 100%;
+  background-color: #c3bbb1;
+  
+}
+
+.slider-part3 h1 {
+  font-size: 30px;
+}
+
+.slider-part3 p {
+  font-size: 13px;
+}
+
+#image {
+  height: 30vw;
+  width: 60vw;
+  position: relative; /*parent ko position relative denge tabhi  child uske control me rahgea */
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+  border-bottom: 2px solid #9b958d;
+}
+
+nav i {
+  font-size: 4vh;
+}
+
+#sidebar {
+  height: 100%;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.486);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  right: -30%;
+  top: 0%;
+  padding: 20px;
+  padding-top: 2%;
+  border-radius: 15px;
+  z-index: 10;
+  visibility: hidden;
+}
+
+#sidebar h1 {
+  font-size: 80px;
+  margin-bottom: 25%;
+  border-bottom: 2px solid #9b958d;
+}
+
+#sidebar h4 {
+  font-size: 40px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  color: black;
+  font-size: 35px;
+  margin: 10px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+#sidebar i {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 3px;
+  /* background-color: white; */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.slider {
+  height: 40%;
+  width: 100%;
+  /* background-color: black; */
+  display: flex;
+  margin-top: 10px;
+}
+
+.slider-part1 {
+  height: 100%;
+  width: 33%;
+  padding: 15px;
+  padding-left: 35px;
+}
+
+.slider-part1 img {
+  height: 70%;
+  width: 80%;
+  box-shadow: -5px 8px 10px black;
+  margin-bottom: 7px;
+}
+
+.slider-part1 img:hover {
+  scale: 1.1;
+}
+
+.slider-part1 h1 {
+  font-size: 30px;
+}
+
+.slider-part1 p {
+  font-size: 13px;
+}
+
+.slider-part2 {
+  height: 100%;
+  width: 33%;
+  /* background-color: blue; */
+  padding: 15px;
+  padding-left: 35px;
+  border-left: 3px solid #706c66;
+  border-right: 3px solid #706c66;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-part2 h1 {
+  font-family: naruto;
+  font-size: 17vh;
+}
+
+.slider-part2 h3 {
+  font-size: 10vh;
+}
+
+.slider-part3 {
+  height: 100%;
+  width: 33%;
+  /* background-color: blue; */
+  padding: 15px;
+  padding-left: 35px;
+}
+
+.slider-part3 img {
+  height: 70%;
+  width: 80%;
+  box-shadow: -5px 8px 10px black;
+  margin-bottom: 7px;
+}
+
+.slider-part3 img:hover {
+  scale: 1.1;
+}
+
+.name {
+  background-color: black;
+  color: #c3bbb1;
+  height: 80%;
+  width: 90%;
+  font-size: 530px;
+  margin-top: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: naruto;
+  text-shadow: 5px 5px 5px #706c66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+}
+
+.info1 {
+  height: max-content;
+  width: 40%;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+#cod {
+  font-family: naruto;
+  text-decoration: line-through 4px #9b958d;
+  font-size: 15vh;
+  gap: 5px;
+  padding-left: 55px;
+  padding-right: 30px;
+}
+
+#loves {
+  font-size: 5vh;
+  /* font-family: naruto; */
+  font-weight: 100;
+  padding-left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#loves span {
+  background-color: black;
+  height: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #c3bbb1;
+  font-size: 20vh;
+  position: relative;
+  bottom: 20px;
+}
+
+.info1 img {
+  width: 80%;
+  height: 100%;
+  margin-left: 4vw;
+  margin-bottom: 2vw;
+  border: 1px solid black;
+}
+
+.info2 {
+  border-left: 2px solid #706c66;
+}
+
+.info2 img {
+  width: 90%;
+  height: 100%;
+  margin-left: 4vw;
+  border: 1px solid black;
+  margin-bottom: 50px;
+}
+
+.work {
+  margin-top: 5vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.work img {
+  width: 60%;
+  height: 70%;
+  margin-right: 8%;
+}
+
+.work h1 {
+  font-size: 5vw;
+  font-family: naruto;
+  gap: 5px;
+  line-break: 3vw;
+  padding-right: 20px;
+}
+
+.cards {
+  width: 100%;
+  padding: 15px;
+  padding-left: 20px;
+  margin-bottom: 5vh;
+  display: flex;
+  height: 50vh;
+  justify-content: space-between;
+}
+
+.card {
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 10px black;
+  width: 45%;
+  padding: 10px;
+  margin-right: 2vw;
+  margin-left: 2vw;
+}
+
+.cardleft {
+  margin-left: 0%;
+}
+
+.incard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  font-family: sasuke;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px dashed black;
+  height: 100%;
+  padding-right: 30px;
+}
+
+.page2 {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+#move {
+  background-color: #c3bbb1;
+  display: flex;
+  align-items: center;
+  overflow:hidden;
+  border-top:2px solid #706c66;
+  border-bottom:2px solid #706c66;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.marque {
+  font-family: sasuke;
+  font-size: 8vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 4vh;
+  flex-shrink: 0;
+  transform: translateX(-100%);
+  margin-right: 10px;
+}
+
+.marque span{
+  background-color: black;
+  color:white;
+  font-family:naruto;
+  font-size: 60px;
+  padding: 5px;
+  margin-right: 100px;
+}
+
+.marque img {
+  height: 4vw;
+  margin-right: 60px;
+  margin-left: 10px;
+}
+
+.page3{
+  height:100%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.site{
+  height:10vh;
+  width:100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap:20px;
+}
+
+.site h1,.site a{
+  font-size: 2rem;
+  font-family: naruto;
+  color:black;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+.para{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sasuke;
+  font-size: 20px;
+}
