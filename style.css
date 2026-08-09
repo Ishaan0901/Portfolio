@@ -1104,6 +1104,76 @@ button:focus-visible {
   background: var(--teal-dim)
 }
 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color .3s ease, transform .3s var(--ease)
+}
+
+.cert-card:hover {
+  border-color: #4dd9c44d;
+  transform: translateY(-3px)
+}
+
+.cert-thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--surface-raised);
+  border-bottom: 1px solid var(--border)
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform .4s var(--ease)
+}
+
+.cert-card:hover .cert-thumb img {
+  transform: scale(1.04)
+}
+
+.cert-info {
+  padding: 1.3rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--teal)
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4
+}
+
+.cert-date {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-faint)
+}
+
 .edu-list {
   position: relative;
   padding-left: 2.1rem;
