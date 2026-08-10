@@ -82,45 +82,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 /* ---------------------------------------------------
-   Projects carousel — hover/focus highlight effect
+   Projects grid — keyboard focus outline handled via CSS
 --------------------------------------------------- */
-const projectsScroll = document.getElementById("projectsScroll");
-
-if (projectsScroll && !prefersReducedMotion) {
-  const projectCards = projectsScroll.querySelectorAll(".project-card-mini");
-
-  projectCards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      projectCards.forEach((other) => {
-        if (other === card) {
-          other.classList.add("is-active");
-          other.classList.remove("is-shrink");
-        } else {
-          other.classList.add("is-shrink");
-          other.classList.remove("is-active");
-        }
-      });
-    });
-
-    card.addEventListener("focus", () => {
-      projectCards.forEach((other) => {
-        other.classList.toggle("is-active", other === card);
-        other.classList.toggle("is-shrink", other !== card);
-      });
-    });
-  });
-
-  projectsScroll.addEventListener("mouseleave", () => {
-    projectCards.forEach((card) => card.classList.remove("is-active", "is-shrink"));
-  });
-
-  projectsScroll.addEventListener("focusout", (event) => {
-    if (!projectsScroll.contains(event.relatedTarget)) {
-      projectCards.forEach((card) => card.classList.remove("is-active", "is-shrink"));
-    }
-  });
-}
-
 /* ---------------------------------------------------
    Hero intro animation (GSAP)
 --------------------------------------------------- */

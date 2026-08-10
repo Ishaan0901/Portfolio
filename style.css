@@ -883,44 +883,12 @@ button:focus-visible {
 }
 
 .projects-scroll {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  overflow-y: visible;
-  padding: .5rem .25rem 1.75rem;
-  margin: 0 -.25rem;
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent
-}
-
-.projects-scroll::-webkit-scrollbar {
-  height: 8px
-}
-
-.projects-scroll::-webkit-scrollbar-track {
-  background: transparent
-}
-
-.projects-scroll::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 999px
-}
-
-.projects-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--teal)
-}
-
-.projects-scroll:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 6px;
-  border-radius: 8px
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem
 }
 
 .project-card-mini {
-  scroll-snap-align: start;
-  flex: 0 0 clamp(258px, 30vw, 320px);
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -929,23 +897,14 @@ button:focus-visible {
   padding: 1.85rem 1.6rem;
   text-decoration: none;
   color: inherit;
-  transform-origin: center bottom;
-  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .35s ease, opacity .35s ease;
-  will-change: transform
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .3s ease
 }
 
 .project-card-mini:hover,
 .project-card-mini.is-active {
   border-color: var(--teal);
   box-shadow: 0 22px 46px -20px #4dd9c461;
-  transform: scale(1.06);
-  z-index: 2
-}
-
-.project-card-mini.is-shrink {
-  transform: scale(.94);
-  opacity: .6;
-  border-color: var(--border-soft)
+  transform: translateY(-4px)
 }
 
 .pm-icon {
