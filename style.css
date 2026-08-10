@@ -1039,6 +1039,29 @@ button:focus-visible {
   box-shadow: 0 10px 22px -8px #4dd9c499
 }
 
+.pm-actions {
+  margin-top: auto;
+  display: flex;
+  gap: .6rem
+}
+
+.pm-actions .pm-btn {
+  margin-top: 0;
+  flex: 1
+}
+
+.pm-btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text)
+}
+
+.project-card-mini:hover .pm-btn-outline,
+.project-card-mini.is-active .pm-btn-outline {
+  border-color: var(--teal);
+  box-shadow: none
+}
+
 .project-card-mini:hover .pm-btn svg,
 .project-card-mini.is-active .pm-btn svg {
   transform: translate(2px, -2px)
