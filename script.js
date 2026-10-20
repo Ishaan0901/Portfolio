@@ -160,7 +160,7 @@ statElements.forEach((el) => counterObserver.observe(el));
    Hero role — typewriter effect
 --------------------------------------------------- */
 const roleEl = document.getElementById("heroRoleText");
-const roles = ["Aspiring AI Engineer", "Aspiring ML Engineer", "Aspiring Data Scientist", "AI & ML Student"];
+const roles = ["Aspiring AI Engineer", "Aspiring GenAI Engineer", "Aspiring Agentic AI Engineer", "Aspiring Forward Deployed Engineer", "AI & ML Student"];
 
 const TYPE_SPEED = 75;
 const DELETE_SPEED = 40;
