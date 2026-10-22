@@ -1,17 +1,17 @@
 :root {
-  --bg: #07080b;
-  --bg-soft: #0b0d11;
-  --surface: #0e1014;
-  --surface-raised: #141821;
-  --border: #1d2128;
-  --border-soft: #171b21;
-  --text: #f2f3f1;
-  --text-dim: #9aa1ac;
-  --text-faint: #5b6270;
-  --teal: #4dd9c4;
-  --teal-dim: rgba(77, 217, 196, .14);
-  --amber: #f2b544;
-  --amber-dim: rgba(242, 181, 68, .14);
+  --bg: #0b0b0c;
+  --bg-soft: #0f0f11;
+  --surface: #131315;
+  --surface-raised: #1a1a1d;
+  --border: #262629;
+  --border-soft: #1c1c1f;
+  --text: #f2efe8;
+  --text-dim: #aaa69d;
+  --text-faint: #706d67;
+  --accent: #e8b04a;
+  --accent-dim: rgba(232, 176, 74, .12);
+  --accent-2: #5fcfb9;
+  --accent-2-dim: rgba(95, 207, 185, .12);
   --radius: 14px;
   --maxw: 1180px;
   --ease: cubic-bezier(.16, .84, .32, 1);
@@ -62,8 +62,9 @@ body:before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
-  background-size: 48px 48px
+  background-image: radial-gradient(ellipse 60% 40% at 82% -6%, rgba(232, 176, 74, .075), transparent 70%), linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-repeat: no-repeat, repeat, repeat
 }
 
 img,
@@ -122,7 +123,7 @@ section {
   font-size: .75rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: .6rem;
@@ -133,7 +134,7 @@ section {
   content: "";
   width: 14px;
   height: 1px;
-  background: var(--teal)
+  background: var(--accent)
 }
 
 .eyebrow.centered {
@@ -162,7 +163,7 @@ h3 {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px
 }
@@ -179,7 +180,7 @@ button:focus-visible {
 }
 
 .site-header.scrolled {
-  background: #07080bc7;
+  background: #0b0b0cc7;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom-color: var(--border)
@@ -200,7 +201,7 @@ button:focus-visible {
 }
 
 .logo .dot {
-  color: var(--teal)
+  color: var(--accent)
 }
 
 .nav-links {
@@ -226,7 +227,7 @@ button:focus-visible {
   bottom: 0;
   height: 1px;
   width: 0;
-  background: var(--teal);
+  background: var(--accent);
   transition: width .3s var(--ease)
 }
 
@@ -250,8 +251,8 @@ button:focus-visible {
 }
 
 .nav-cta:hover {
-  border-color: var(--teal);
-  color: var(--teal)
+  border-color: var(--accent);
+  color: var(--accent)
 }
 
 .menu-btn {
@@ -308,7 +309,7 @@ button:focus-visible {
 }
 
 .mobile-overlay a:hover {
-  color: var(--teal)
+  color: var(--accent)
 }
 
 #home {
@@ -334,7 +335,7 @@ button:focus-visible {
 }
 
 .nn-line {
-  stroke: var(--teal);
+  stroke: var(--accent);
   stroke-width: 1;
   fill: none;
   opacity: .12;
@@ -342,8 +343,8 @@ button:focus-visible {
 }
 
 .nn-node {
-  fill: var(--teal);
-  opacity: .55;
+  fill: var(--accent);
+  opacity: .35;
   animation: nodePulse 2.6s ease-in-out infinite;
   transform-origin: center
 }
@@ -398,21 +399,21 @@ button:focus-visible {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--teal);
+  background: var(--accent);
   animation: dotPulse 2.2s infinite
 }
 
 @keyframes dotPulse {
   0% {
-    box-shadow: 0 0 #4dd9c480
+    box-shadow: 0 0 #e8b04a80
   }
 
   70% {
-    box-shadow: 0 0 0 9px #4dd9c400
+    box-shadow: 0 0 0 9px #e8b04a00
   }
 
   to {
-    box-shadow: 0 0 #4dd9c400
+    box-shadow: 0 0 #e8b04a00
   }
 }
 
@@ -432,7 +433,7 @@ button:focus-visible {
   font-size: clamp(3.5rem, 10vw, 7.5rem);
   line-height: .95;
   letter-spacing: -.03em;
-  background: linear-gradient(135deg, #f2f3f1 30%, var(--teal) 70%, var(--amber) 100%);
+  background: linear-gradient(135deg, #f2efe8 35%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -448,9 +449,9 @@ button:focus-visible {
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--teal), var(--amber));
+  background: linear-gradient(90deg, var(--accent), rgba(232, 176, 74, .15));
   border-radius: 2px;
-  animation: nameUnderline 1.2s var(--ease) 1s forwards
+  animation: nameUnderline 1.2s var(--ease) 3s forwards
 }
 
 @keyframes nameUnderline {
@@ -465,7 +466,7 @@ button:focus-visible {
   font-family: var(--font-mono);
   font-size: clamp(1.05rem, 2.1vw, 1.4rem);
   font-weight: 500;
-  color: var(--teal);
+  color: var(--accent);
   letter-spacing: .01em;
   min-height: 1.5em;
   margin-bottom: .9rem;
@@ -477,7 +478,7 @@ button:focus-visible {
   width: 2px;
   height: 1em;
   margin-left: .15em;
-  background: var(--teal);
+  background: var(--accent);
   animation: caretBlink 1s step-end infinite
 }
 
@@ -513,7 +514,7 @@ button:focus-visible {
 }
 
 .hero-title .accent {
-  color: var(--teal)
+  color: var(--accent)
 }
 
 .hero-sub {
@@ -544,14 +545,14 @@ button:focus-visible {
 }
 
 .btn-primary {
-  background: var(--teal);
-  color: #06110f;
+  background: var(--accent);
+  color: #1a1206;
   font-weight: 500
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px -10px #4dd9c48c
+  box-shadow: 0 10px 26px -10px #e8b04a8c
 }
 
 .btn-secondary {
@@ -625,7 +626,7 @@ button:focus-visible {
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: clamp(1.7rem, 4vw, 2.5rem);
-  color: var(--amber)
+  color: var(--accent-2)
 }
 
 .stat-label {
@@ -663,7 +664,7 @@ button:focus-visible {
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .12em;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1.1rem;
   display: block
 }
@@ -699,7 +700,7 @@ button:focus-visible {
 .exp-company {
   font-family: var(--font-mono);
   font-size: .85rem;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1.4rem
 }
 
@@ -718,7 +719,7 @@ button:focus-visible {
   top: .55em;
   width: 6px;
   height: 6px;
-  background: var(--teal);
+  background: var(--accent);
   transform: rotate(45deg)
 }
 
@@ -748,8 +749,8 @@ button:focus-visible {
 }
 
 .view-all:hover {
-  color: var(--teal);
-  border-color: var(--teal)
+  color: var(--accent);
+  border-color: var(--accent)
 }
 
 .project-card {
@@ -787,8 +788,8 @@ button:focus-visible {
 }
 
 .project-visual:hover {
-  border-color: var(--teal);
-  box-shadow: 0 0 30px -10px #4dd9c433
+  border-color: var(--accent);
+  box-shadow: 0 0 30px -10px #e8b04a33
 }
 
 .tag-row {
@@ -840,9 +841,9 @@ button:focus-visible {
   font-weight: 500;
   padding: .45rem .85rem;
   border-radius: 8px;
-  background: var(--amber-dim);
-  color: var(--amber);
-  border: 1px solid rgba(242, 181, 68, .3)
+  background: var(--accent-2-dim);
+  color: var(--accent-2);
+  border: 1px solid rgba(95, 207, 185, .3)
 }
 
 .code-link {
@@ -859,8 +860,8 @@ button:focus-visible {
 }
 
 .code-link:hover {
-  color: var(--teal);
-  border-color: var(--teal)
+  color: var(--accent);
+  border-color: var(--accent)
 }
 
 .code-link svg {
@@ -902,8 +903,8 @@ button:focus-visible {
 
 .project-card-mini:hover,
 .project-card-mini.is-active {
-  border-color: var(--teal);
-  box-shadow: 0 22px 46px -20px #4dd9c461;
+  border-color: var(--accent);
+  box-shadow: 0 22px 46px -20px #e8b04a61;
   transform: translateY(-4px)
 }
 
@@ -915,8 +916,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--teal-dim);
-  color: var(--teal);
+  background: var(--accent-dim);
+  color: var(--accent);
   margin-bottom: 1.4rem;
   transition: background .3s ease, color .3s ease
 }
@@ -928,8 +929,8 @@ button:focus-visible {
 
 .project-card-mini:hover .pm-icon,
 .project-card-mini.is-active .pm-icon {
-  background: var(--teal);
-  color: #06110f
+  background: var(--accent);
+  color: #1a1206
 }
 
 .pm-tags {
@@ -982,8 +983,8 @@ button:focus-visible {
   font-weight: 500;
   padding: .75rem 1rem;
   border-radius: 999px;
-  background: var(--teal);
-  color: #06110f;
+  background: var(--accent);
+  color: #1a1206;
   transition: transform .25s var(--ease), box-shadow .25s ease
 }
 
@@ -995,7 +996,7 @@ button:focus-visible {
 
 .project-card-mini:hover .pm-btn,
 .project-card-mini.is-active .pm-btn {
-  box-shadow: 0 10px 22px -8px #4dd9c499
+  box-shadow: 0 10px 22px -8px #e8b04a99
 }
 
 .pm-actions {
@@ -1017,7 +1018,7 @@ button:focus-visible {
 
 .project-card-mini:hover .pm-btn-outline,
 .project-card-mini.is-active .pm-btn-outline {
-  border-color: var(--teal);
+  border-color: var(--accent);
   box-shadow: none
 }
 
@@ -1051,7 +1052,7 @@ button:focus-visible {
 }
 
 .skill-panel:hover {
-  border-color: #4dd9c44d;
+  border-color: #e8b04a4d;
   transform: translateY(-3px)
 }
 
@@ -1060,7 +1061,7 @@ button:focus-visible {
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: var(--teal);
+  color: var(--accent);
   margin-bottom: 1.1rem;
   display: block
 }
@@ -1083,7 +1084,7 @@ button:focus-visible {
 
 .skill-tag:hover {
   color: var(--text);
-  background: var(--teal-dim)
+  background: var(--accent-dim)
 }
 
 .cert-grid {
@@ -1104,7 +1105,7 @@ button:focus-visible {
 }
 
 .cert-card:hover {
-  border-color: #4dd9c44d;
+  border-color: #e8b04a4d;
   transform: translateY(-3px)
 }
 
@@ -1139,7 +1140,7 @@ button:focus-visible {
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: var(--teal)
+  color: var(--accent)
 }
 
 .cert-title {
@@ -1188,7 +1189,7 @@ button:focus-visible {
   height: 11px;
   border-radius: 50%;
   background: var(--bg);
-  border: 2px solid var(--teal)
+  border: 2px solid var(--accent)
 }
 
 .edu-date {
@@ -1253,8 +1254,8 @@ button:focus-visible {
 }
 
 .contact-email:hover {
-  color: var(--teal);
-  border-color: var(--teal)
+  color: var(--accent);
+  border-color: var(--accent)
 }
 
 .contact-links {
@@ -1288,8 +1289,8 @@ button:focus-visible {
 
 .contact-pill:hover {
   color: var(--text);
-  border-color: var(--teal);
-  background: var(--teal-dim)
+  border-color: var(--accent);
+  background: var(--accent-dim)
 }
 
 .site-footer {
@@ -1312,7 +1313,7 @@ button:focus-visible {
 }
 
 .site-footer a:hover {
-  color: var(--teal)
+  color: var(--accent)
 }
 
 .back-to-top {
@@ -1339,7 +1340,7 @@ button:focus-visible {
 }
 
 .back-to-top:hover {
-  border-color: var(--teal);
+  border-color: var(--accent);
   transform: translateY(-3px)
 }
 
@@ -1479,5 +1480,123 @@ button:focus-visible {
   .stagger>* {
     opacity: 1;
     transform: none
+  }
+}
+
+/* ===== Entry animation ===== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  animation: plExit .9s cubic-bezier(.76, 0, .24, 1) 1.65s forwards;
+  will-change: transform
+}
+
+.pl-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: plInner .45s ease 1.4s forwards
+}
+
+.pl-mark {
+  font-family: var(--font-name);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 9vw, 5.5rem);
+  letter-spacing: -.03em;
+  line-height: 1;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(14px) scale(.96);
+  animation: plIn .8s var(--ease) .15s forwards
+}
+
+.pl-mark span {
+  color: var(--accent)
+}
+
+.pl-name {
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0;
+  animation: plName .9s ease .45s forwards
+}
+
+.pl-bar {
+  width: min(180px, 50vw);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden
+}
+
+.pl-bar i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: plBar 1.25s cubic-bezier(.65, 0, .35, 1) .25s forwards
+}
+
+@keyframes plIn {
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+@keyframes plName {
+  from {
+    opacity: 0;
+    letter-spacing: .6em
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: .32em
+  }
+}
+
+@keyframes plBar {
+  to {
+    transform: scaleX(1)
+  }
+}
+
+@keyframes plInner {
+  to {
+    opacity: 0;
+    transform: translateY(-12px)
+  }
+}
+
+@keyframes plExit {
+  0% {
+    transform: translateY(0);
+    border-radius: 0
+  }
+
+  100% {
+    transform: translateY(-100%);
+    border-radius: 0 0 50% 50% / 0 0 14vh 14vh;
+    visibility: hidden
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    display: none
   }
 }

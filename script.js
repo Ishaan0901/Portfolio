@@ -6,6 +6,12 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let locoScroll;
 
+/* Intro: always start at the top and keep the page still while the entry animation plays */
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+const INTRO_MS = 2600; // preloader length (matches the CSS animation)
+const introLeft = () => Math.max(0, INTRO_MS - performance.now());
+
 /* ---------------------------------------------------
    Smooth scrolling (Locomotive Scroll) + header/back-to-top state
 --------------------------------------------------- */
@@ -23,6 +29,9 @@ if (prefersReducedMotion) {
     multiplier: 0.9,
     lerp: 0.08,
   });
+
+  locoScroll.stop();
+  setTimeout(() => locoScroll.start(), introLeft());
 
   locoScroll.on("scroll", ({ scroll }) => {
     const header = document.getElementById("siteHeader");
@@ -89,7 +98,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 --------------------------------------------------- */
 if (!prefersReducedMotion && window.gsap) {
   gsap
-    .timeline({ delay: 0.1 })
+    .timeline({ delay: Math.max(0.1, 1.95 - performance.now() / 1000) })
     .fromTo("#heroPill", { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: "power3.out" })
     .fromTo("#heroGreeting", { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out" }, "-=.3")
     .fromTo("#heroName", { autoAlpha: 0, y: 32, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 1, ease: "power3.out" }, "-=.2")
@@ -201,5 +210,5 @@ if (prefersReducedMotion) {
     }
   }
 
-  setTimeout(tickRole, 900);
+  setTimeout(tickRole, prefersReducedMotion ? 900 : Math.max(900, 3200 - performance.now()));
 }
