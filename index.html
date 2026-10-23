@@ -6,11 +6,71 @@
   <title>Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI</title>
   <meta content="Portfolio of Ishaan Sharma — B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." name="description" />
   <meta content="#0b0b0c" name="theme-color" />
+  <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+  <link href="https://ishaan0901.github.io/Portfolio/" rel="canonical" />
+  <meta content="Ishaan Sharma" name="author" />
+  <meta content="website" property="og:type" />
+  <meta content="Ishaan Sharma — Portfolio" property="og:site_name" />
+  <meta content="Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI" property="og:title" />
+  <meta content="B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." property="og:description" />
+  <meta content="https://ishaan0901.github.io/Portfolio/" property="og:url" />
+  <meta content="https://ishaan0901.github.io/Portfolio/og-image.png" property="og:image" />
+  <meta content="1200" property="og:image:width" />
+  <meta content="630" property="og:image:height" />
+  <meta content="Ishaan Sharma — AI Engineer portfolio" property="og:image:alt" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI" name="twitter:title" />
+  <meta content="B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." name="twitter:description" />
+  <meta content="https://ishaan0901.github.io/Portfolio/og-image.png" name="twitter:image" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ishaan Sharma","url":"https://ishaan0901.github.io/Portfolio/","jobTitle":"AI / GenAI Engineer (entry level)","email":"mailto:sharmaishaan0901@gmail.com","sameAs":["https://github.com/Ishaan0901","https://www.linkedin.com/in/ishaansharma195/"]}</script>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
+  <link href="style.css?v=4" rel="stylesheet" />
+  <style id="portfolio-extras">
+    .nav-actions{display:flex;align-items:center;gap:.6rem}
+    .btn svg{width:15px;height:15px;flex:none}
+    .mobile-overlay a[download]{color:var(--accent)}
+    .project-filters{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.6rem}
+    .project-filters+.scroll-hint{margin:0 0 1.75rem}
+    .filter-btn{font-family:var(--font-mono);font-size:.78rem;color:var(--text-dim);background:transparent;border:1px solid var(--border);border-radius:999px;padding:.55rem 1.05rem;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;transition:color .25s ease,border-color .25s ease,background .25s ease}
+    .filter-btn span{font-size:.68rem;color:var(--text-faint)}
+    .filter-btn:hover{color:var(--text);border-color:var(--text-dim)}
+    .filter-btn.is-active{background:var(--accent);border-color:var(--accent);color:#1a1206}
+    .filter-btn.is-active span{color:#1a1206;opacity:.7}
+    .project-card-mini{position:relative}
+    .project-card-mini.is-hidden{display:none}
+    .project-card-mini.filter-in{animation:filterIn .5s var(--ease) both}
+    @keyframes filterIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    .pm-badge{position:absolute;top:1.35rem;right:1.35rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-dim);background:var(--accent-dim);padding:.28rem .6rem;border-radius:999px}
+    .cert-grid{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:900px){.nav-actions{display:none}}
+    @media(max-width:600px){
+      .cert-grid{grid-template-columns:1fr}
+      .hero-actions .btn{flex:1 1 100%;justify-content:center}
+      .project-filters{flex-wrap:nowrap;overflow-x:auto;gap:.45rem;padding-bottom:.25rem;scrollbar-width:none}
+      .project-filters::-webkit-scrollbar{display:none}
+      .filter-btn{padding:.5rem .8rem;font-size:.74rem;white-space:nowrap;flex:none}
+    }
+    /* horizontal pinned projects */
+    .hpin-section{padding:0!important}
+    .hpin-wrap{position:relative}
+    .hpin-sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:5.5rem 0 1.25rem}
+    .hpin-sticky>.container{width:100%}
+    .hpin-sticky .section-head{margin-bottom:.5rem}
+    .hpin-sticky .section-title{font-size:clamp(1.8rem,3.2vw,2.6rem)}
+    .hpin-sticky .project-filters{margin:.4rem 0 .2rem}
+    .hpin-viewport{overflow:hidden;padding:.9rem 0;width:100%}
+    .projects-scroll{display:flex!important;gap:1.5rem;width:max-content;padding:0 max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+    .projects-scroll .project-card-mini{flex:0 0 min(400px,82vw)}
+    .hpin-progress{width:min(1200px,calc(100% - 2.5rem));height:2px;background:var(--border);margin:.6rem auto 0;border-radius:2px;overflow:hidden}
+    .hpin-progress i{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
+    @media(max-height:760px){.hpin-sticky{padding-top:4.8rem}.hpin-sticky .pm-desc{font-size:.84rem;line-height:1.55}}
+    @media(prefers-reduced-motion:reduce){.project-card-mini.filter-in{animation:none}}
+  </style>
 </head>
 <body>
   <div aria-hidden="true" class="preloader"><div class="pl-inner"><div class="pl-mark">IS<span>.</span></div><div class="pl-name">Ishaan Sharma</div><div class="pl-bar"><i></i></div></div></div>
@@ -25,7 +85,10 @@
         <a class="nav-link" href="#certifications">Certifications</a>
         <a class="nav-link" href="#education">Education</a>
       </nav>
-      <a class="nav-cta" href="#contact">Get in touch</a>
+      <div class="nav-actions">
+        <a class="nav-cta" download="Ishaan_Sharma_Resume.pdf" href="Ishaan_Sharma_Resume.pdf">Resume</a>
+        <a class="nav-cta" href="#contact">Get in touch</a>
+      </div>
       <button aria-expanded="false" aria-label="Toggle menu" class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -37,6 +100,7 @@
     <a href="#certifications">Certifications</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
+    <a download="Ishaan_Sharma_Resume.pdf" href="Ishaan_Sharma_Resume.pdf">Resume</a>
   </div>
   <section id="home">
     <div aria-hidden="true" class="hero-bg">
@@ -86,6 +150,7 @@
       <p class="hero-sub" id="heroSub">B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends.</p>
       <div class="hero-actions" id="heroActions">
         <a class="btn btn-primary" href="#projects">View Projects →</a>
+        <a class="btn btn-secondary" download="Ishaan_Sharma_Resume.pdf" href="Ishaan_Sharma_Resume.pdf">Download Resume <svg fill="none" height="15" stroke="currentColor" stroke-width="1.8" style="flex:none" viewBox="0 0 24 24" width="15"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"></path></svg></a>
         <a class="btn btn-secondary" href="#contact">Get in Touch</a>
       </div>
       <div class="scroll-cue" id="heroScroll"><span>Scroll</span><span class="scroll-line"></span></div>
@@ -131,96 +196,27 @@
       </div>
     </div>
   </section>
-  <section class="section-pad" id="projects">
-    <div class="container">
-      <div class="section-head projects-head-row reveal">
+  <section class="section-pad hpin-section" id="projects">
+    <div class="hpin-wrap" id="hWrap">
+      <div class="hpin-sticky" data-scroll data-scroll-sticky data-scroll-target="#hWrap" id="hSticky">
+        <div class="container">
+      <div class="section-head projects-head-row">
         <div><span class="eyebrow">Projects</span>
           <h2 class="section-title">Things I've built.</h2>
         </div>
         <a class="view-all" href="https://github.com/Ishaan0901" rel="noopener" target="_blank">View all on GitHub →</a>
       </div>
-      <p class="scroll-hint reveal"><span>← scroll to explore →</span></p>
-      <div class="projects-scroll reveal" id="projectsScroll">
-        <a aria-label="MediBot — Medical RAG Knowledge Assistant, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"></path>
-              <path d="M7.5 12h2l1.5-3 2 6 1.5-3h2"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">FAISS</span></div>
-          <h3 class="pm-title">MediBot — Medical RAG Assistant</h3>
-          <div class="pm-period">Jul 2026</div>
-          <p class="pm-desc">RAG pipeline over open-access medical literature (NCBI StatPearls web pages and PDFs) — recursive chunking, local BGE embeddings indexed in FAISS with MMR retrieval, and a LangChain LCEL chain (retriever, prompt, Mistral AI) returning answers with source attribution and supporting passage snippets in a Streamlit chat UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Heart Disease Prediction System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/heart-disease-predictor" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M20.8 8.6c0 5.1-8.8 10.2-8.8 10.2S3.2 13.7 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path>
-              <path d="M4.5 11h3l1.5-3 2 6 1.5-4h1.5l1.2 2h4.3"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">Scikit-learn</span><span class="pm-tag">XGBoost</span><span class="pm-tag">Streamlit</span></div>
-          <h3 class="pm-title">Heart Disease Prediction System</h3>
-          <div class="pm-period">Mar 2026 — Apr 2026</div>
-          <p class="pm-desc">End-to-end ML app predicting heart disease risk from 5,000 clinical records — Random Forest, Logistic Regression, SVM, XGBoost and ANN compared, tuned with RandomizedSearchCV, and deployed as an explainable AI app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Credit Card Fraud Detection System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Credit-Card-Fraud-Detection" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M12 3 4.5 5.5v5.6c0 5 3.2 8.5 7.5 9.9 4.3-1.4 7.5-4.9 7.5-9.9V5.5L12 3Z"></path>
-              <path d="M9 12.2l2.1 2.1L15.5 10"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">Pandas</span><span class="pm-tag">Scikit-learn</span><span class="pm-tag">Streamlit</span></div>
-          <h3 class="pm-title">Credit Card Fraud Detection</h3>
-          <div class="pm-period">Mar 2026 — Apr 2026</div>
-          <p class="pm-desc">Fraud detection pipeline on 10,000 transactions with a realistic 1.5% fraud rate — engineered behavioral features, compared Logistic Regression and Random Forest, reaching 99.70% accuracy with 100% precision.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Zoro Store — AI Customer Support Chatbot, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Zoro_Store_Customer_Support" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9l-4.2 3.4A.6.6 0 0 1 4 18.9V16H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"></path>
-              <path d="M8 10h8M8 13h5"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">ChromaDB</span></div>
-          <h3 class="pm-title">Zoro Store — AI Customer Support Chatbot</h3>
-          <div class="pm-period">Jul 2026</div>
-          <p class="pm-desc">RAG-based customer support chatbot grounding responses in product and policy documents — multi-source CSV/PDF ingestion, ChromaDB vector search, and an LCEL chain with Mistral AI, deployed as a Streamlit chat app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <div class="project-card-mini" tabindex="0">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">Groq</span><span class="pm-tag">Streamlit</span></div>
-          <h3 class="pm-title">BuildMate AI</h3>
-          <div class="pm-period">Aug 2026</div>
-          <p class="pm-desc">Developer tool that turns a learning/project description into three outputs at once — next-project ideas, a ready-to-publish README, and a LinkedIn post — via a parallel LangGraph fan-out/fan-in workflow running three specialized agents concurrently on Llama 3.3 70B.</p>
-          <div class="pm-actions">
-            <a aria-label="BuildMate AI live demo, opens in a new tab" class="pm-btn" href="https://buildmateai-yypx46dtt6cuz8ziywgfhs.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
-            <a aria-label="BuildMate AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/BuildMate_AI" rel="noopener" target="_blank">GitHub</a>
-          </div>
-        </div>
-        <div class="project-card-mini" tabindex="0">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M11 4a7 7 0 1 0 4.9 12l4.6 4.6"></path>
-              <path d="M9 8v6M6 11h6"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">Tavily</span><span class="pm-tag">Streamlit</span></div>
-          <h3 class="pm-title">Deep Research Agent</h3>
-          <div class="pm-period">Aug 2026</div>
-          <p class="pm-desc">Multi-agent research pipeline running four sequential stages — search (Tavily), scrape (BeautifulSoup), draft, and self-critique — with a dedicated agent or chain per stage, producing a structured, sourced report scored out of 10 by its own critic chain.</p>
-          <div class="pm-actions">
-            <a aria-label="Deep Research Agent live demo, opens in a new tab" class="pm-btn" href="https://deepresearchagent-3t9e3uiavpwqbuwx7pszdp.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
-            <a aria-label="Deep Research Agent GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/Deep_Research_Agent" rel="noopener" target="_blank">GitHub</a>
-          </div>
-        </div>
-        <div class="project-card-mini" tabindex="0">
+      <div aria-label="Filter projects" class="project-filters" role="group">
+        <button aria-pressed="true" class="filter-btn is-active" data-filter="all" type="button">All <span>10</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="agents" type="button">Agents &amp; LLM <span>7</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="apis" type="button">APIs <span>3</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="ml" type="button">ML <span>2</span></button>
+      </div>
+      </div>
+        <div class="hpin-viewport">
+          <div class="projects-scroll" id="projectsScroll">
+        <div class="project-card-mini" tabindex="0" data-cat="agents">
+          <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
@@ -237,30 +233,8 @@
             <a aria-label="JobPilot AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/JobPilot_AI" rel="noopener" target="_blank">GitHub</a>
           </div>
         </div>
-                <a aria-label="GD.AI — AI Group Discussion Simulator, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-              <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Mistral</span></div>
-          <h3 class="pm-title">GD.AI — Group Discussion Simulator</h3>
-          <div class="pm-period">Sep 2026</div>
-          <p class="pm-desc">Group-discussion practice room for placement prep — an LLM-generated topic, a 60-second prep window, then a 5-minute voice or text discussion with two AI panelists, scored by an AI evaluator. A LangGraph state machine pauses and resumes (human-in-the-loop) around each student turn, served through a FastAPI API with a vanilla JS frontend using the browser Speech API.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Patient Management API, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Patient-Management-system-API-" rel="noopener" target="_blank">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">FastAPI</span><span class="pm-tag">Pydantic</span><span class="pm-tag">REST</span></div>
-          <h3 class="pm-title">Patient Management API</h3>
-          <div class="pm-period">Sep 2026</div>
-          <p class="pm-desc">REST API built while learning FastAPI — full CRUD over patient records with Pydantic validation, computed BMI and health-verdict fields, sorting by height, weight or BMI, and JSON-file persistence.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-<a aria-label="DevForge AI — Autonomous Self-Healing Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank">
+        <a aria-label="DevForge AI — Autonomous Self-Healing Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
+          <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="m16 18 6-6-6-6"></path>
@@ -272,6 +246,112 @@
           <div class="pm-period">Oct 2026</div>
           <p class="pm-desc">Autonomous LangGraph agent that generates Python programs and websites from plain English, executes them, reads errors, and self-corrects through a tool-calling retry loop (3 retries, recursion limit 15). Four agent tools with conditional routing and a 10s execution timeout, exposed via a FastAPI REST endpoint with Pydantic validation and a Streamlit UI with live website preview.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
         </a>
+        <a aria-label="MediBot — Medical RAG Knowledge Assistant, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank" data-cat="agents">
+          <span class="pm-badge">Featured</span>
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"></path>
+              <path d="M7.5 12h2l1.5-3 2 6 1.5-3h2"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">FAISS</span></div>
+          <h3 class="pm-title">MediBot — Medical RAG Assistant</h3>
+          <div class="pm-period">Jul 2026</div>
+          <p class="pm-desc">RAG pipeline over open-access medical literature (NCBI StatPearls web pages and PDFs) — recursive chunking, local BGE embeddings indexed in FAISS with MMR retrieval, and a LangChain LCEL chain (retriever, prompt, Mistral AI) returning answers with source attribution and supporting passage snippets in a Streamlit chat UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <a aria-label="GD.AI — AI Group Discussion Simulator, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank" data-cat="agents apis">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+              <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Mistral</span></div>
+          <h3 class="pm-title">GD.AI — Group Discussion Simulator</h3>
+          <div class="pm-period">Sep 2026</div>
+          <p class="pm-desc">Group-discussion practice room for placement prep — an LLM-generated topic, a 60-second prep window, then a 5-minute voice or text discussion with two AI panelists, scored by an AI evaluator. A LangGraph state machine pauses and resumes (human-in-the-loop) around each student turn, served through a FastAPI API with a vanilla JS frontend using the browser Speech API.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <div class="project-card-mini" tabindex="0" data-cat="agents">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M11 4a7 7 0 1 0 4.9 12l4.6 4.6"></path>
+              <path d="M9 8v6M6 11h6"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">Tavily</span><span class="pm-tag">Streamlit</span></div>
+          <h3 class="pm-title">Deep Research Agent</h3>
+          <div class="pm-period">Aug 2026</div>
+          <p class="pm-desc">Multi-agent research pipeline running four sequential stages — search (Tavily), scrape (BeautifulSoup), draft, and self-critique — with a dedicated agent or chain per stage, producing a structured, sourced report scored out of 10 by its own critic chain.</p>
+          <div class="pm-actions">
+            <a aria-label="Deep Research Agent live demo, opens in a new tab" class="pm-btn" href="https://deepresearchagent-3t9e3uiavpwqbuwx7pszdp.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+            <a aria-label="Deep Research Agent GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/Deep_Research_Agent" rel="noopener" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="project-card-mini" tabindex="0" data-cat="agents">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">Groq</span><span class="pm-tag">Streamlit</span></div>
+          <h3 class="pm-title">BuildMate AI</h3>
+          <div class="pm-period">Aug 2026</div>
+          <p class="pm-desc">Developer tool that turns a learning/project description into three outputs at once — next-project ideas, a ready-to-publish README, and a LinkedIn post — via a parallel LangGraph fan-out/fan-in workflow running three specialized agents concurrently on Llama 3.3 70B.</p>
+          <div class="pm-actions">
+            <a aria-label="BuildMate AI live demo, opens in a new tab" class="pm-btn" href="https://buildmateai-yypx46dtt6cuz8ziywgfhs.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+            <a aria-label="BuildMate AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/BuildMate_AI" rel="noopener" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <a aria-label="Zoro Store — AI Customer Support Chatbot, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Zoro_Store_Customer_Support" rel="noopener" target="_blank" data-cat="agents">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9l-4.2 3.4A.6.6 0 0 1 4 18.9V16H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"></path>
+              <path d="M8 10h8M8 13h5"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">ChromaDB</span></div>
+          <h3 class="pm-title">Zoro Store — AI Customer Support Chatbot</h3>
+          <div class="pm-period">Jul 2026</div>
+          <p class="pm-desc">RAG-based customer support chatbot grounding responses in product and policy documents — multi-source CSV/PDF ingestion, ChromaDB vector search, and an LCEL chain with Mistral AI, deployed as a Streamlit chat app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <a aria-label="Patient Management API, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Patient-Management-system-API-" rel="noopener" target="_blank" data-cat="apis">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">FastAPI</span><span class="pm-tag">Pydantic</span><span class="pm-tag">REST</span></div>
+          <h3 class="pm-title">Patient Management API</h3>
+          <div class="pm-period">Sep 2026</div>
+          <p class="pm-desc">REST API built while learning FastAPI — full CRUD over patient records with Pydantic validation, computed BMI and health-verdict fields, sorting by height, weight or BMI, and JSON-file persistence.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <a aria-label="Credit Card Fraud Detection System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Credit-Card-Fraud-Detection" rel="noopener" target="_blank" data-cat="ml">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 3 4.5 5.5v5.6c0 5 3.2 8.5 7.5 9.9 4.3-1.4 7.5-4.9 7.5-9.9V5.5L12 3Z"></path>
+              <path d="M9 12.2l2.1 2.1L15.5 10"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">Pandas</span><span class="pm-tag">Scikit-learn</span><span class="pm-tag">Streamlit</span></div>
+          <h3 class="pm-title">Credit Card Fraud Detection</h3>
+          <div class="pm-period">Mar 2026 — Apr 2026</div>
+          <p class="pm-desc">Fraud detection pipeline on 10,000 transactions with a realistic 1.5% fraud rate — engineered behavioral features, compared Logistic Regression and Random Forest, reaching 99.70% accuracy with 100% precision.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <a aria-label="Heart Disease Prediction System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/heart-disease-predictor" rel="noopener" target="_blank" data-cat="ml">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M20.8 8.6c0 5.1-8.8 10.2-8.8 10.2S3.2 13.7 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path>
+              <path d="M4.5 11h3l1.5-3 2 6 1.5-4h1.5l1.2 2h4.3"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">Scikit-learn</span><span class="pm-tag">XGBoost</span><span class="pm-tag">Streamlit</span></div>
+          <h3 class="pm-title">Heart Disease Prediction System</h3>
+          <div class="pm-period">Mar 2026 — Apr 2026</div>
+          <p class="pm-desc">End-to-end ML app predicting heart disease risk from 5,000 clinical records — Random Forest, Logistic Regression, SVM, XGBoost and ANN compared, tuned with RandomizedSearchCV, and deployed as an explainable AI app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+          </div>
+        </div>
+        <div class="hpin-progress"><i id="hProg"></i></div>
       </div>
     </div>
   </section>
@@ -332,20 +412,12 @@
             <span class="cert-date">Aug 2026</span>
           </div>
         </a>
-        <a class="cert-card" href="https://coursera.org/verify/MR966H10GU2Y" rel="noopener" target="_blank">
-          <div class="cert-thumb"><img alt="Generative AI Engineering and Fine-Tuning Transformers certificate" loading="lazy" src="IBM_finetuning_engineering_certificate.jpg" /></div>
+        <a class="cert-card" href="Tutedude_ML_certificate.jpg" rel="noopener" target="_blank">
+          <div class="cert-thumb"><img alt="Tutedude Machine Learning Course Certificate of Completion" loading="lazy" src="Tutedude_ML_certificate.jpg" /></div>
           <div class="cert-info">
-            <span class="cert-issuer">IBM · Coursera</span>
-            <h3 class="cert-title">Generative AI Engineering and Fine-Tuning Transformers</h3>
-            <span class="cert-date">Aug 2026</span>
-          </div>
-        </a>
-        <a class="cert-card" href="https://coursera.org/verify/32LRYEJBWA5E" rel="noopener" target="_blank">
-          <div class="cert-thumb"><img alt="Generative AI Advanced Fine-Tuning for LLMs certificate" loading="lazy" src="IBM_finetuning_advanced_certificate.jpg" /></div>
-          <div class="cert-info">
-            <span class="cert-issuer">IBM · Coursera</span>
-            <h3 class="cert-title">Generative AI Advanced Fine-Tuning for LLMs</h3>
-            <span class="cert-date">Aug 2026</span>
+            <span class="cert-issuer">Tutedude</span>
+            <h3 class="cert-title">Machine Learning Course</h3>
+            <span class="cert-date">Apr 2026</span>
           </div>
         </a>
       </div>
@@ -410,6 +482,9 @@
             <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path>
           </svg> +91 8307982923
         </a>
+        <a class="contact-pill" download="Ishaan_Sharma_Resume.pdf" href="Ishaan_Sharma_Resume.pdf">
+          <svg fill="none" height="15" stroke="currentColor" stroke-width="1.8" style="flex:none" viewBox="0 0 24 24" width="15"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"></path></svg> Resume
+        </a>
       </div>
     </div>
   </section>
@@ -423,6 +498,6 @@
   </button>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

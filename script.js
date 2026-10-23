@@ -12,6 +12,33 @@ window.scrollTo(0, 0);
 const INTRO_MS = 2600; // preloader length (matches the CSS animation)
 const introLeft = () => Math.max(0, INTRO_MS - performance.now());
 
+/* Project filters */
+(function () {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll("#projectsScroll .project-card-mini");
+  if (!buttons.length || !cards.length) return;
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const f = btn.dataset.filter;
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      cards.forEach((card) => {
+        const show = f === "all" || (card.dataset.cat || "").split(" ").includes(f);
+        card.classList.toggle("is-hidden", !show);
+        card.classList.remove("filter-in");
+        if (show) {
+          void card.offsetWidth;
+          card.classList.add("filter-in");
+        }
+      });
+      setTimeout(() => (window.hLayout ? window.hLayout() : typeof locoScroll !== "undefined" && locoScroll && locoScroll.update()), 80);
+    })
+  );
+})();
+
 /* ---------------------------------------------------
    Smooth scrolling (Locomotive Scroll) + header/back-to-top state
 --------------------------------------------------- */
@@ -212,3 +239,40 @@ if (prefersReducedMotion) {
 
   setTimeout(tickRole, prefersReducedMotion ? 900 : Math.max(900, 3200 - performance.now()));
 }
+
+
+/* Horizontal pinned projects: vertical scroll drives the cards sideways */
+(function () {
+  const wrap = document.getElementById("hWrap");
+  const track = document.getElementById("projectsScroll");
+  const bar = document.getElementById("hProg");
+  if (!wrap || !track) return;
+  let top = 0, dist = 0;
+  const docTop = (el) => { let y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; };
+  const curY = () => {
+    const y = typeof locoScroll !== "undefined" && locoScroll && locoScroll.scroll && locoScroll.scroll.instance && locoScroll.scroll.instance.scroll
+      ? locoScroll.scroll.instance.scroll.y : null;
+    return y != null ? y : window.scrollY;
+  };
+  const update = (y) => {
+    const p = Math.min(1, Math.max(0, (y - top) / Math.max(1, dist)));
+    track.style.transform = "translate3d(" + -p * dist + "px,0,0)";
+    if (bar) bar.style.transform = "scaleX(" + p + ")";
+  };
+  function layout() {
+    track.style.transform = "translate3d(0,0,0)";
+    dist = Math.max(0, track.offsetWidth - document.documentElement.clientWidth);
+    wrap.style.height = dist + window.innerHeight + "px";
+    top = docTop(wrap);
+    if (typeof locoScroll !== "undefined" && locoScroll) locoScroll.update();
+    update(curY());
+  }
+  window.hLayout = layout;
+  if (typeof locoScroll !== "undefined" && locoScroll) locoScroll.on("scroll", (a) => update(a.scroll.y));
+  window.addEventListener("scroll", () => update(curY()), { passive: true });
+  window.addEventListener("resize", layout);
+  window.addEventListener("load", layout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+  layout();
+  setTimeout(layout, 1500);
+})();
