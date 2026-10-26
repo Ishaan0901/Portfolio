@@ -207,14 +207,27 @@
         <a class="view-all" href="https://github.com/Ishaan0901" rel="noopener" target="_blank">View all on GitHub →</a>
       </div>
       <div aria-label="Filter projects" class="project-filters" role="group">
-        <button aria-pressed="true" class="filter-btn is-active" data-filter="all" type="button">All <span>10</span></button>
-        <button aria-pressed="false" class="filter-btn" data-filter="agents" type="button">Agents &amp; LLM <span>7</span></button>
-        <button aria-pressed="false" class="filter-btn" data-filter="apis" type="button">APIs <span>3</span></button>
+        <button aria-pressed="true" class="filter-btn is-active" data-filter="all" type="button">All <span>11</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="agents" type="button">Agents &amp; LLM <span>8</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="apis" type="button">APIs <span>4</span></button>
         <button aria-pressed="false" class="filter-btn" data-filter="ml" type="button">ML <span>2</span></button>
       </div>
       </div>
         <div class="hpin-viewport">
           <div class="projects-scroll" id="projectsScroll">
+        <a aria-label="ShipForge AI — Human-in-the-Loop Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/ShipForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
+          <span class="pm-badge">Featured</span>
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">Docker</span><span class="pm-tag">FastAPI</span></div>
+          <h3 class="pm-title">ShipForge AI</h3>
+          <div class="pm-period">Oct 2026</div>
+          <p class="pm-desc">Human-in-the-loop coding agent that writes Python from a request, tests it in a locked-down Docker sandbox (no network, memory and CPU limits, 10s timeout), and retries failures up to 3 times through a graph-enforced limit. Nothing ships without approval: after a secret scan, it pushes to a new private GitHub repo with an auto-generated README. Two LangGraph workflows, multi-model fallback, FastAPI backend and a Streamlit UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
         <div class="project-card-mini" tabindex="0" data-cat="agents">
           <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
@@ -233,19 +246,6 @@
             <a aria-label="JobPilot AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/JobPilot_AI" rel="noopener" target="_blank">GitHub</a>
           </div>
         </div>
-        <a aria-label="DevForge AI — Autonomous Self-Healing Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
-          <span class="pm-badge">Featured</span>
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="m16 18 6-6-6-6"></path>
-              <path d="m8 6-6 6 6 6"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Groq</span></div>
-          <h3 class="pm-title">DevForge AI</h3>
-          <div class="pm-period">Oct 2026</div>
-          <p class="pm-desc">Autonomous LangGraph agent that generates Python programs and websites from plain English, executes them, reads errors, and self-corrects through a tool-calling retry loop (3 retries, recursion limit 15). Four agent tools with conditional routing and a 10s execution timeout, exposed via a FastAPI REST endpoint with Pydantic validation and a Streamlit UI with live website preview.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
         <a aria-label="MediBot — Medical RAG Knowledge Assistant, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank" data-cat="agents">
           <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
@@ -258,6 +258,18 @@
           <h3 class="pm-title">MediBot — Medical RAG Assistant</h3>
           <div class="pm-period">Jul 2026</div>
           <p class="pm-desc">RAG pipeline over open-access medical literature (NCBI StatPearls web pages and PDFs) — recursive chunking, local BGE embeddings indexed in FAISS with MMR retrieval, and a LangChain LCEL chain (retriever, prompt, Mistral AI) returning answers with source attribution and supporting passage snippets in a Streamlit chat UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+        </a>
+        <a aria-label="DevForge AI — Autonomous Self-Healing Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="m16 18 6-6-6-6"></path>
+              <path d="m8 6-6 6 6 6"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Groq</span></div>
+          <h3 class="pm-title">DevForge AI</h3>
+          <div class="pm-period">Oct 2026</div>
+          <p class="pm-desc">Autonomous LangGraph agent that generates Python programs and websites from plain English, executes them, reads errors, and self-corrects through a tool-calling retry loop (3 retries, recursion limit 15). Four agent tools with conditional routing and a 10s execution timeout, exposed via a FastAPI REST endpoint with Pydantic validation and a Streamlit UI with live website preview.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
         </a>
         <a aria-label="GD.AI — AI Group Discussion Simulator, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank" data-cat="agents apis">
           <div aria-hidden="true" class="pm-icon">
