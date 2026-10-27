@@ -196,7 +196,7 @@ statElements.forEach((el) => counterObserver.observe(el));
    Hero role — typewriter effect
 --------------------------------------------------- */
 const roleEl = document.getElementById("heroRoleText");
-const roles = ["Aspiring AI Engineer", "Aspiring GenAI Engineer", "Aspiring Agentic AI Engineer", "Aspiring Forward Deployed Engineer", "AI & ML Student"];
+const roles = ["GenAI & Agentic AI Engineer", "B.Tech AI/ML Student"];
 
 const TYPE_SPEED = 75;
 const DELETE_SPEED = 40;
@@ -241,12 +241,14 @@ if (prefersReducedMotion) {
 }
 
 
-/* Horizontal pinned projects: vertical scroll drives the cards sideways */
+/* Horizontal pinned projects: vertical scroll drives the cards sideways.
+   The whole block is scaled to fit the visible height, so it stays complete at any window size or browser zoom. */
 (function () {
   const wrap = document.getElementById("hWrap");
+  const inner = document.getElementById("hInner");
   const track = document.getElementById("projectsScroll");
   const bar = document.getElementById("hProg");
-  if (!wrap || !track) return;
+  if (!wrap || !inner || !track) return;
   let top = 0, dist = 0;
   const docTop = (el) => { let y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; };
   const curY = () => {
@@ -260,9 +262,25 @@ if (prefersReducedMotion) {
     if (bar) bar.style.transform = "scaleX(" + p + ")";
   };
   function layout() {
+    const vw = document.documentElement.clientWidth;
+    const vh = window.innerHeight;
+    const hdrEl = document.getElementById("siteHeader");
+    const hdr = (hdrEl ? hdrEl.offsetHeight : 80) + 4;
+    /* measure at natural size */
+    inner.style.transform = "none";
+    inner.style.width = "100%";
     track.style.transform = "translate3d(0,0,0)";
-    dist = Math.max(0, track.offsetWidth - document.documentElement.clientWidth);
-    wrap.style.height = dist + window.innerHeight + "px";
+    track.style.paddingLeft = track.style.paddingRight = Math.max(20, (vw - 1200) / 2) + "px";
+    const natural = inner.offsetHeight;
+    const avail = Math.max(120, vh - hdr - 14);
+    const s = Math.min(1, Math.max(0.22, avail / natural));
+    const wv = vw / s; /* visible width in unscaled px */
+    inner.style.width = wv + "px";
+    inner.style.transform = "scale(" + s + ")";
+    inner.style.top = hdr + Math.max(0, (avail - natural * s) / 2) + "px";
+    track.style.paddingLeft = track.style.paddingRight = Math.max(20, (wv - 1200) / 2) + "px";
+    dist = Math.max(0, track.offsetWidth - wv);
+    wrap.style.height = dist * s + vh + "px"; /* 1 px of scrolling = 1 px of sideways movement */
     top = docTop(wrap);
     if (typeof locoScroll !== "undefined" && locoScroll) locoScroll.update();
     update(curY());
@@ -275,4 +293,23 @@ if (prefersReducedMotion) {
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
   layout();
   setTimeout(layout, 1500);
+})();
+
+/* Architecture pop-ups (native <dialog> sits above the smooth-scroll transform) */
+(function () {
+  const lock = (on) => { if (typeof locoScroll !== "undefined" && locoScroll) on ? locoScroll.stop() : locoScroll.start(); };
+  document.querySelectorAll(".pm-arch").forEach((btn) =>
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const d = document.getElementById("arch-" + btn.dataset.arch);
+      if (d && d.showModal) { d.showModal(); lock(true); }
+    })
+  );
+  document.querySelectorAll(".arch-dialog").forEach((d) => {
+    d.addEventListener("close", () => lock(false));
+    d.addEventListener("click", (e) => { if (e.target === d) d.close(); });
+    d.addEventListener("wheel", (e) => e.stopPropagation(), { passive: true });
+    const x = d.querySelector(".arch-close");
+    if (x) x.addEventListener("click", () => d.close());
+  });
 })();

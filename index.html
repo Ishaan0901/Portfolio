@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI</title>
+  <title>Ishaan Sharma | GenAI &amp; Agentic AI Engineer</title>
   <meta content="Portfolio of Ishaan Sharma — B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." name="description" />
   <meta content="#0b0b0c" name="theme-color" />
   <link href="favicon.svg" rel="icon" type="image/svg+xml" />
@@ -13,7 +13,7 @@
   <meta content="Ishaan Sharma" name="author" />
   <meta content="website" property="og:type" />
   <meta content="Ishaan Sharma — Portfolio" property="og:site_name" />
-  <meta content="Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI" property="og:title" />
+  <meta content="Ishaan Sharma | GenAI &amp; Agentic AI Engineer" property="og:title" />
   <meta content="B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." property="og:description" />
   <meta content="https://ishaan0901.github.io/Portfolio/" property="og:url" />
   <meta content="https://ishaan0901.github.io/Portfolio/og-image.png" property="og:image" />
@@ -21,15 +21,15 @@
   <meta content="630" property="og:image:height" />
   <meta content="Ishaan Sharma — AI Engineer portfolio" property="og:image:alt" />
   <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Ishaan Sharma | AI Engineer · GenAI Engineer · Agentic AI" name="twitter:title" />
+  <meta content="Ishaan Sharma | GenAI &amp; Agentic AI Engineer" name="twitter:title" />
   <meta content="B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends." name="twitter:description" />
   <meta content="https://ishaan0901.github.io/Portfolio/og-image.png" name="twitter:image" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ishaan Sharma","url":"https://ishaan0901.github.io/Portfolio/","jobTitle":"AI / GenAI Engineer (entry level)","email":"mailto:sharmaishaan0901@gmail.com","sameAs":["https://github.com/Ishaan0901","https://www.linkedin.com/in/ishaansharma195/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ishaan Sharma","url":"https://ishaan0901.github.io/Portfolio/","jobTitle":"GenAI & Agentic AI Engineer (entry level)","email":"mailto:sharmaishaan0901@gmail.com","sameAs":["https://github.com/Ishaan0901","https://www.linkedin.com/in/ishaansharma195/"]}</script>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet" />
-  <link href="style.css?v=4" rel="stylesheet" />
+  <link href="style.css?v=6" rel="stylesheet" />
   <style id="portfolio-extras">
     .nav-actions{display:flex;align-items:center;gap:.6rem}
     .btn svg{width:15px;height:15px;flex:none}
@@ -58,8 +58,8 @@
     /* horizontal pinned projects */
     .hpin-section{padding:0!important}
     .hpin-wrap{position:relative}
-    .hpin-sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center;padding:5.5rem 0 1.25rem}
-    .hpin-sticky>.container{width:100%}
+    .hpin-sticky{position:sticky;top:0;height:100vh;height:100svh}
+    .hpin-inner{position:absolute;left:0;top:0;width:100%;transform-origin:0 0;will-change:transform}
     .hpin-sticky .section-head{margin-bottom:.5rem}
     .hpin-sticky .section-title{font-size:clamp(1.8rem,3.2vw,2.6rem)}
     .hpin-sticky .project-filters{margin:.4rem 0 .2rem}
@@ -69,6 +69,35 @@
     .hpin-progress{width:min(1200px,calc(100% - 2.5rem));height:2px;background:var(--border);margin:.6rem auto 0;border-radius:2px;overflow:hidden}
     .hpin-progress i{display:block;height:100%;background:var(--accent);transform-origin:left;transform:scaleX(0)}
     @media(max-height:760px){.hpin-sticky{padding-top:4.8rem}.hpin-sticky .pm-desc{font-size:.84rem;line-height:1.55}}
+    /* architecture pop-ups */
+    .pm-arch{display:inline-flex;align-items:center;gap:.4rem;align-self:flex-start;margin:.2rem 0 1rem;padding:0 0 .15rem;background:none;border:0;border-bottom:1px solid var(--accent-dim);font-family:var(--font-mono);font-size:.78rem;color:var(--accent);cursor:pointer;transition:border-color .25s ease}
+    .pm-arch:hover{border-bottom-color:var(--accent)}
+    .arch-dialog{width:min(1000px,95vw);max-height:92vh;margin:auto;padding:0;overflow:auto;border:1px solid var(--border);border-radius:18px;background:var(--surface);color:var(--text)}
+    .arch-dialog::backdrop{background:rgba(6,6,7,.8);backdrop-filter:blur(5px)}
+    .arch-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1.5rem 1.75rem .4rem}
+    .arch-head h3{margin:.35rem 0 0;font-size:1.4rem}
+    .arch-kicker{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+    .arch-close{flex:none;width:2.3rem;height:2.3rem;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--text);font-size:1.4rem;line-height:1;cursor:pointer}
+    .arch-close:hover{border-color:var(--accent);color:var(--accent)}
+    .arch-scroll{overflow-x:auto;padding:.75rem 1.5rem .25rem}
+    .arch-scroll svg{display:block;width:100%;min-width:760px;height:auto}
+    .ar-box{fill:var(--surface-raised);stroke:#3a3a40;stroke-width:1.5}
+    .ar-box.acc{stroke:var(--accent);stroke-width:2;fill:var(--accent-dim)}
+    .ar-t{fill:#f6f3ec;font:600 17px var(--font-name,sans-serif)}
+    .ar-s{fill:#d2cec4;font:13px var(--font-mono,monospace)}
+    .ar-n{fill:#f1eee7;font:13.5px var(--font-mono,monospace)}
+    .ar-lane{fill:var(--accent);font:600 12.5px var(--font-mono,monospace);letter-spacing:.14em}
+    .ar-l{stroke:#c9c5bb;stroke-width:2;fill:none}
+    .ar-ah{fill:#c9c5bb}
+    .arch-facts{list-style:none;margin:.5rem 1.75rem 0;padding:0;display:grid;gap:.5rem}
+    .arch-facts li{font-family:var(--font-mono);font-size:.8rem;line-height:1.55;color:var(--text);background:var(--surface-raised);border:1px solid var(--border);border-radius:10px;padding:.6rem .85rem}
+    .arch-notes{padding:1.1rem 1.75rem 1rem}
+    .arch-notes h4{margin:0 0 .8rem;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);font-weight:500}
+    .arch-notes ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.6rem}
+    .arch-notes li{font-size:.92rem;line-height:1.6;color:var(--text-dim)}
+    .arch-notes li strong{display:block;color:var(--text);font-weight:600}
+    .arch-link{display:inline-block;margin:0 1.75rem 1.5rem;font-family:var(--font-mono);font-size:.82rem;color:var(--accent)}
+    @media(max-width:700px){.arch-notes ul{grid-template-columns:1fr}.arch-head,.arch-notes{padding-left:1.1rem;padding-right:1.1rem}.arch-facts{margin-left:1.1rem;margin-right:1.1rem}.arch-link{margin-left:1.1rem}}
     @media(prefers-reduced-motion:reduce){.project-card-mini.filter-in{animation:none}}
   </style>
 </head>
@@ -144,8 +173,8 @@
       </svg>
     </div>
     <div class="container hero-content">
-      <div class="status-pill" id="heroPill"><span class="status-dot"></span>Open to AI, GenAI, Agentic AI &amp; Forward Deployed Engineer roles</div><span class="hero-greeting" id="heroGreeting">Hi, I'm</span><span class="hero-name" id="heroName">Ishaan Sharma</span>
-      <div aria-hidden="true" class="hero-role" id="heroRole"><span id="heroRoleText"></span><span class="cursor"></span></div><span class="sr-only">Aspiring AI Engineer, Aspiring GenAI Engineer, Aspiring Agentic AI Engineer, Aspiring Forward Deployed Engineer, and AI &amp; ML Student</span>
+      <div class="status-pill" id="heroPill"><span class="status-dot"></span>Open to entry-level GenAI &amp; Agentic AI Engineer roles</div><span class="hero-greeting" id="heroGreeting">Hi, I'm</span><span class="hero-name" id="heroName">Ishaan Sharma</span>
+      <div aria-hidden="true" class="hero-role" id="heroRole"><span id="heroRoleText"></span><span class="cursor"></span></div><span class="sr-only">GenAI &amp; Agentic AI Engineer, and B.Tech AI/ML Student</span>
       <h1 class="hero-title" id="heroTitle">Building with <span class="accent">LLMs, RAG &amp; ML.</span> From data to deployment</h1>
       <p class="hero-sub" id="heroSub">B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends.</p>
       <div class="hero-actions" id="heroActions">
@@ -161,10 +190,10 @@
       <div class="about-grid">
         <div class="about-text reveal"><span class="eyebrow">About</span>
           <h2 class="section-title">Turning data into decisions, end to end.</h2>
-          <p>B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends. Shipped a RAG-based medical knowledge assistant, a LangGraph job-search agent, and a self-healing LangGraph coding agent, and built a RAG incident chatbot as a team lead during a summer internship. IBM-certified in RAG &amp; Agentic AI, with a grounding in classical ML (feature engineering, model evaluation, SHAP) and Streamlit deployment. Seeking an entry-level AI, GenAI, Agentic AI, or Forward Deployed Engineer role.</p>
+          <p>B.Tech AI/ML student building production-style LLM applications, with hands-on experience in RAG, tool-calling agents, and FastAPI backends. Shipped a RAG-based medical knowledge assistant, a LangGraph job-search agent, and a self-healing LangGraph coding agent, and built a RAG incident chatbot as a team lead during a summer internship. IBM-certified in RAG &amp; Agentic AI, with a grounding in classical ML (feature engineering, model evaluation, SHAP) and Streamlit deployment. Seeking an entry-level GenAI, Agentic AI, or Forward Deployed Engineer role.</p>
         </div>
         <div class="model-card reveal"><span class="model-card-title">// Profile</span>
-          <div class="model-row"><span class="k">Role</span><span class="v">Aspiring AI / GenAI Engineer</span></div>
+          <div class="model-row"><span class="k">Role</span><span class="v">GenAI &amp; Agentic AI (entry-level)</span></div>
           <div class="model-row"><span class="k">Focus</span><span class="v">LLM Apps, RAG, Agentic AI</span></div>
           <div class="model-row"><span class="k">Education</span><span class="v">B.Tech AI/ML, JB Institute</span></div>
           <div class="model-row"><span class="k">Status</span><span class="v">Open to opportunities</span></div>
@@ -199,6 +228,7 @@
   <section class="section-pad hpin-section" id="projects">
     <div class="hpin-wrap" id="hWrap">
       <div class="hpin-sticky" data-scroll data-scroll-sticky data-scroll-target="#hWrap" id="hSticky">
+        <div class="hpin-inner" id="hInner">
         <div class="container">
       <div class="section-head projects-head-row">
         <div><span class="eyebrow">Projects</span>
@@ -207,15 +237,16 @@
         <a class="view-all" href="https://github.com/Ishaan0901" rel="noopener" target="_blank">View all on GitHub →</a>
       </div>
       <div aria-label="Filter projects" class="project-filters" role="group">
-        <button aria-pressed="true" class="filter-btn is-active" data-filter="all" type="button">All <span>11</span></button>
+        <button aria-pressed="true" class="filter-btn is-active" data-filter="main" type="button">Main <span>5</span></button>
         <button aria-pressed="false" class="filter-btn" data-filter="agents" type="button">Agents &amp; LLM <span>8</span></button>
         <button aria-pressed="false" class="filter-btn" data-filter="apis" type="button">APIs <span>4</span></button>
         <button aria-pressed="false" class="filter-btn" data-filter="ml" type="button">ML <span>2</span></button>
+        <button aria-pressed="false" class="filter-btn" data-filter="other" type="button">Other <span>6</span></button>
       </div>
       </div>
         <div class="hpin-viewport">
           <div class="projects-scroll" id="projectsScroll">
-        <a aria-label="ShipForge AI — Human-in-the-Loop Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/ShipForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
+        <div class="project-card-mini" tabindex="0" data-cat="agents apis main">
           <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -226,9 +257,12 @@
           <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">Docker</span><span class="pm-tag">FastAPI</span></div>
           <h3 class="pm-title">ShipForge AI</h3>
           <div class="pm-period">Oct 2026</div>
-          <p class="pm-desc">Human-in-the-loop coding agent that writes Python from a request, tests it in a locked-down Docker sandbox (no network, memory and CPU limits, 10s timeout), and retries failures up to 3 times through a graph-enforced limit. Nothing ships without approval: after a secret scan, it pushes to a new private GitHub repo with an auto-generated README. Two LangGraph workflows, multi-model fallback, FastAPI backend and a Streamlit UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <div class="project-card-mini" tabindex="0" data-cat="agents">
+          <p class="pm-desc">Human-in-the-loop coding agent that writes Python from a request, tests it in a locked-down Docker sandbox (no network, memory and CPU limits, 10s timeout), and retries failures up to 3 times through a graph-enforced limit. Nothing ships without approval: after a secret scan, it pushes to a new private GitHub repo with an auto-generated README. Two LangGraph workflows, multi-model fallback, FastAPI backend and a Streamlit UI.</p><button class="pm-arch" data-arch="shipforge" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="ShipForge AI GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/ShipForge_AI" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini" tabindex="0" data-cat="agents main">
           <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -240,13 +274,14 @@
           <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">Groq</span><span class="pm-tag">Chroma</span></div>
           <h3 class="pm-title">JobPilot AI</h3>
           <div class="pm-period">Sep 2026</div>
-          <p class="pm-desc">AI-powered job search assistant built on a LangGraph tool-routing agent that decides, per query, whether to retrieve from an uploaded resume via a ChromaDB RAG pipeline, search live job openings through the Adzuna API, or research companies on the web — streaming grounded answers into a Streamlit chat interface, deployed live with 8+ unique viewers.</p>
-          <div class="pm-actions">
+          <p class="pm-desc">AI-powered job search assistant built on a LangGraph tool-routing agent that decides, per query, whether to retrieve from an uploaded resume via a ChromaDB RAG pipeline, search live job openings through the Adzuna API, or research companies on the web — streaming grounded answers into a Streamlit chat interface, deployed live on Streamlit Community Cloud.</p>
+          <button class="pm-arch" data-arch="jobpilot" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
             <a aria-label="JobPilot AI live demo, opens in a new tab" class="pm-btn" href="https://jobpilotai-ef6m2atix6t98dgnnuzqdj.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
             <a aria-label="JobPilot AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/JobPilot_AI" rel="noopener" target="_blank">GitHub</a>
           </div>
         </div>
-        <a aria-label="MediBot — Medical RAG Knowledge Assistant, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank" data-cat="agents">
+        <div class="project-card-mini" tabindex="0" data-cat="agents main">
           <span class="pm-badge">Featured</span>
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -257,21 +292,12 @@
           <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">FAISS</span></div>
           <h3 class="pm-title">MediBot — Medical RAG Assistant</h3>
           <div class="pm-period">Jul 2026</div>
-          <p class="pm-desc">RAG pipeline over open-access medical literature (NCBI StatPearls web pages and PDFs) — recursive chunking, local BGE embeddings indexed in FAISS with MMR retrieval, and a LangChain LCEL chain (retriever, prompt, Mistral AI) returning answers with source attribution and supporting passage snippets in a Streamlit chat UI.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="DevForge AI — Autonomous Self-Healing Coding Agent, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank" data-cat="agents apis">
-          <div aria-hidden="true" class="pm-icon">
-            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-              <path d="m16 18 6-6-6-6"></path>
-              <path d="m8 6-6 6 6 6"></path>
-            </svg>
-          </div>
-          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Groq</span></div>
-          <h3 class="pm-title">DevForge AI</h3>
-          <div class="pm-period">Oct 2026</div>
-          <p class="pm-desc">Autonomous LangGraph agent that generates Python programs and websites from plain English, executes them, reads errors, and self-corrects through a tool-calling retry loop (3 retries, recursion limit 15). Four agent tools with conditional routing and a 10s execution timeout, exposed via a FastAPI REST endpoint with Pydantic validation and a Streamlit UI with live website preview.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="GD.AI — AI Group Discussion Simulator, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank" data-cat="agents apis">
+          <p class="pm-desc">RAG pipeline over open-access medical literature (NCBI StatPearls web pages and PDFs) — recursive chunking, local BGE embeddings indexed in FAISS with MMR retrieval, and a LangChain LCEL chain (retriever, prompt, Mistral AI) returning answers with source attribution and supporting passage snippets in a Streamlit chat UI.</p><button class="pm-arch" data-arch="medibot" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="MediBot GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini" tabindex="0" data-cat="agents apis main">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
@@ -281,9 +307,12 @@
           <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Mistral</span></div>
           <h3 class="pm-title">GD.AI — Group Discussion Simulator</h3>
           <div class="pm-period">Sep 2026</div>
-          <p class="pm-desc">Group-discussion practice room for placement prep — an LLM-generated topic, a 60-second prep window, then a 5-minute voice or text discussion with two AI panelists, scored by an AI evaluator. A LangGraph state machine pauses and resumes (human-in-the-loop) around each student turn, served through a FastAPI API with a vanilla JS frontend using the browser Speech API.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <div class="project-card-mini" tabindex="0" data-cat="agents">
+          <p class="pm-desc">Group-discussion practice room for placement prep — an LLM-generated topic, a 60-second prep window, then a 5-minute voice or text discussion with two AI panelists, scored by an AI evaluator. A LangGraph state machine pauses and resumes (human-in-the-loop) around each student turn, served through a FastAPI API with a vanilla JS frontend using the browser Speech API.</p><button class="pm-arch" data-arch="gdai" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="GD.AI GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini" tabindex="0" data-cat="agents main">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M11 4a7 7 0 1 0 4.9 12l4.6 4.6"></path>
@@ -294,12 +323,28 @@
           <h3 class="pm-title">Deep Research Agent</h3>
           <div class="pm-period">Aug 2026</div>
           <p class="pm-desc">Multi-agent research pipeline running four sequential stages — search (Tavily), scrape (BeautifulSoup), draft, and self-critique — with a dedicated agent or chain per stage, producing a structured, sourced report scored out of 10 by its own critic chain.</p>
-          <div class="pm-actions">
+          <button class="pm-arch" data-arch="deepresearch" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
             <a aria-label="Deep Research Agent live demo, opens in a new tab" class="pm-btn" href="https://deepresearchagent-3t9e3uiavpwqbuwx7pszdp.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
             <a aria-label="Deep Research Agent GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/Deep_Research_Agent" rel="noopener" target="_blank">GitHub</a>
           </div>
         </div>
-        <div class="project-card-mini" tabindex="0" data-cat="agents">
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="agents apis other">
+          <div aria-hidden="true" class="pm-icon">
+            <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="m16 18 6-6-6-6"></path>
+              <path d="m8 6-6 6 6 6"></path>
+            </svg>
+          </div>
+          <div class="pm-tags"><span class="pm-tag">LangGraph</span><span class="pm-tag">FastAPI</span><span class="pm-tag">Groq</span></div>
+          <h3 class="pm-title">DevForge AI</h3>
+          <div class="pm-period">Oct 2026</div>
+          <p class="pm-desc">Autonomous LangGraph agent that generates Python programs and websites from plain English, executes them, reads errors, and self-corrects through a tool-calling retry loop (3 retries, recursion limit 15). Four agent tools with conditional routing and a 10s execution timeout, exposed via a FastAPI REST endpoint with Pydantic validation and a Streamlit UI with live website preview.</p><button class="pm-arch" data-arch="devforge" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="DevForge AI GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="agents other">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>
@@ -309,12 +354,13 @@
           <h3 class="pm-title">BuildMate AI</h3>
           <div class="pm-period">Aug 2026</div>
           <p class="pm-desc">Developer tool that turns a learning/project description into three outputs at once — next-project ideas, a ready-to-publish README, and a LinkedIn post — via a parallel LangGraph fan-out/fan-in workflow running three specialized agents concurrently on Llama 3.3 70B.</p>
-          <div class="pm-actions">
+          <button class="pm-arch" data-arch="buildmate" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
             <a aria-label="BuildMate AI live demo, opens in a new tab" class="pm-btn" href="https://buildmateai-yypx46dtt6cuz8ziywgfhs.streamlit.app/" rel="noopener" target="_blank">Live Demo <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
             <a aria-label="BuildMate AI GitHub repository, opens in a new tab" class="pm-btn pm-btn-outline" href="https://github.com/Ishaan0901/BuildMate_AI" rel="noopener" target="_blank">GitHub</a>
           </div>
         </div>
-        <a aria-label="Zoro Store — AI Customer Support Chatbot, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Zoro_Store_Customer_Support" rel="noopener" target="_blank" data-cat="agents">
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="agents other">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9l-4.2 3.4A.6.6 0 0 1 4 18.9V16H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"></path>
@@ -324,9 +370,12 @@
           <div class="pm-tags"><span class="pm-tag">LangChain</span><span class="pm-tag">RAG</span><span class="pm-tag">ChromaDB</span></div>
           <h3 class="pm-title">Zoro Store — AI Customer Support Chatbot</h3>
           <div class="pm-period">Jul 2026</div>
-          <p class="pm-desc">RAG-based customer support chatbot grounding responses in product and policy documents — multi-source CSV/PDF ingestion, ChromaDB vector search, and an LCEL chain with Mistral AI, deployed as a Streamlit chat app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Patient Management API, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Patient-Management-system-API-" rel="noopener" target="_blank" data-cat="apis">
+          <p class="pm-desc">RAG-based customer support chatbot grounding responses in product and policy documents — multi-source CSV/PDF ingestion, ChromaDB vector search, and an LCEL chain with Mistral AI, deployed as a Streamlit chat app.</p><button class="pm-arch" data-arch="zoro" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="Zoro Store GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/Zoro_Store_Customer_Support" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="apis other">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -335,9 +384,12 @@
           <div class="pm-tags"><span class="pm-tag">FastAPI</span><span class="pm-tag">Pydantic</span><span class="pm-tag">REST</span></div>
           <h3 class="pm-title">Patient Management API</h3>
           <div class="pm-period">Sep 2026</div>
-          <p class="pm-desc">REST API built while learning FastAPI — full CRUD over patient records with Pydantic validation, computed BMI and health-verdict fields, sorting by height, weight or BMI, and JSON-file persistence.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Credit Card Fraud Detection System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/Credit-Card-Fraud-Detection" rel="noopener" target="_blank" data-cat="ml">
+          <p class="pm-desc">REST API built while learning FastAPI — full CRUD over patient records with Pydantic validation, computed BMI and health-verdict fields, sorting by height, weight or BMI, and JSON-file persistence.</p><button class="pm-arch" data-arch="patient" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="Patient Management API GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/Patient-Management-system-API-" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="ml other">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M12 3 4.5 5.5v5.6c0 5 3.2 8.5 7.5 9.9 4.3-1.4 7.5-4.9 7.5-9.9V5.5L12 3Z"></path>
@@ -347,9 +399,12 @@
           <div class="pm-tags"><span class="pm-tag">Pandas</span><span class="pm-tag">Scikit-learn</span><span class="pm-tag">Streamlit</span></div>
           <h3 class="pm-title">Credit Card Fraud Detection</h3>
           <div class="pm-period">Mar 2026 — Apr 2026</div>
-          <p class="pm-desc">Fraud detection pipeline on 10,000 transactions with a realistic 1.5% fraud rate — engineered behavioral features, compared Logistic Regression and Random Forest, reaching 99.70% accuracy with 100% precision.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
-        <a aria-label="Heart Disease Prediction System, opens GitHub repository in a new tab" class="project-card-mini" href="https://github.com/Ishaan0901/heart-disease-predictor" rel="noopener" target="_blank" data-cat="ml">
+          <p class="pm-desc">Fraud detection pipeline on 10,000 transactions with a realistic 1.5% fraud rate — engineered behavioral features, compared Logistic Regression and Random Forest, evaluated with accuracy, precision, recall, F1 and a confusion matrix, plus feature-importance analysis.</p><button class="pm-arch" data-arch="fraud" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="Credit Card Fraud Detection GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/Credit-Card-Fraud-Detection" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
+        <div class="project-card-mini is-hidden" tabindex="0" data-cat="ml other">
           <div aria-hidden="true" class="pm-icon">
             <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path d="M20.8 8.6c0 5.1-8.8 10.2-8.8 10.2S3.2 13.7 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"></path>
@@ -359,11 +414,15 @@
           <div class="pm-tags"><span class="pm-tag">Scikit-learn</span><span class="pm-tag">XGBoost</span><span class="pm-tag">Streamlit</span></div>
           <h3 class="pm-title">Heart Disease Prediction System</h3>
           <div class="pm-period">Mar 2026 — Apr 2026</div>
-          <p class="pm-desc">End-to-end ML app predicting heart disease risk from 5,000 clinical records — Random Forest, Logistic Regression, SVM, XGBoost and ANN compared, tuned with RandomizedSearchCV, and deployed as an explainable AI app.</p><span class="pm-btn">View Project <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
-        </a>
+          <p class="pm-desc">End-to-end ML app predicting heart disease risk from 5,000 clinical records — Random Forest, Logistic Regression, SVM, XGBoost and ANN compared, tuned with RandomizedSearchCV, and deployed as an explainable AI app.</p><button class="pm-arch" data-arch="heart" type="button">View architecture <svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="13"><path d="M7 17 17 7M7 7h10v10"></path></svg></button>
+        <div class="pm-actions">
+          <a aria-label="Heart Disease Prediction System GitHub repository, opens in a new tab" class="pm-btn" href="https://github.com/Ishaan0901/heart-disease-predictor" rel="noopener" target="_blank">GitHub <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a>
+        </div>
+      </div>
           </div>
         </div>
         <div class="hpin-progress"><i id="hProg"></i></div>
+        </div>
       </div>
     </div>
   </section>
@@ -489,11 +548,6 @@
             <path d="M7 10v7M7 7v.01M11 17v-4.5c0-1.4 1-2.5 2.3-2.5 1.2 0 2.2 1 2.2 2.5V17M11 12.5V10"></path>
           </svg> LinkedIn
         </a>
-        <a class="contact-pill" href="tel:+918307982923">
-          <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
-            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"></path>
-          </svg> +91 8307982923
-        </a>
         <a class="contact-pill" download="Ishaan_Sharma_Resume.pdf" href="Ishaan_Sharma_Resume.pdf?v=5">
           <svg fill="none" height="15" stroke="currentColor" stroke-width="1.8" style="flex:none" viewBox="0 0 24 24" width="15"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"></path></svg> Resume
         </a>
@@ -508,8 +562,85 @@
       <path d="M12 19V5M5 12l7-7 7 7"></path>
     </svg>
   </button>
+  <dialog aria-labelledby="arch-shipforge-t" class="arch-dialog" id="arch-shipforge">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-shipforge-t">ShipForge AI: generate, review, ship</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="ShipForge AI: generate, review, ship architecture diagram" role="img" viewBox="-6 0 972 354" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-shipforge" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">GENERATE</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="74" text-anchor="middle">Request</text><text class="ar-s" x="107.0" y="98" text-anchor="middle">Streamlit → FastAPI</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">write_code</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">LLM + model fallback</text><rect class="ar-box acc" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="68" text-anchor="middle">execute_code</text><text class="ar-s" x="599.0" y="91" text-anchor="middle">Docker sandbox</text><text class="ar-s" x="599.0" y="109" text-anchor="middle">no network · 10 s</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="74" text-anchor="middle">check_result</text><text class="ar-s" x="845.0" y="98" text-anchor="middle">exit code + output</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-shipforge)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-shipforge)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-shipforge)"/><text class="ar-lane" x="12" y="238" text-anchor="start">REVIEW AND PUBLISH</text><rect class="ar-box acc" x="750" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="282" text-anchor="middle">Human review</text><text class="ar-s" x="845.0" y="305" text-anchor="middle">Approve or Reject</text><text class="ar-s" x="845.0" y="323" text-anchor="middle">run waits for you</text><rect class="ar-box" x="504" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="288" text-anchor="middle">Secret scan</text><text class="ar-s" x="599.0" y="312" text-anchor="middle">blocks .env and keys</text><rect class="ar-box" x="258" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="288" text-anchor="middle">Push to GitHub</text><text class="ar-s" x="353.0" y="312" text-anchor="middle">new private repo</text><rect class="ar-box" x="12" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="288" text-anchor="middle">Repo link</text><text class="ar-s" x="107.0" y="312" text-anchor="middle">returned to the UI</text><path class="ar-l" d="M747 296.0 H697" marker-end="url(#ar-shipforge)"/><path class="ar-l" d="M501 296.0 H451" marker-end="url(#ar-shipforge)"/><path class="ar-l" d="M255 296.0 H205" marker-end="url(#ar-shipforge)"/><path class="ar-l" d="M895.0 131 V247" marker-end="url(#ar-shipforge)"/><text class="ar-n" x="907.0" y="194.0" text-anchor="start">success</text><path class="ar-l" d="M795.0 131 V152 Q795.0 164 783.0 164 H365.0 Q353.0 164 353.0 152 V132" marker-end="url(#ar-shipforge)"/><text class="ar-n" x="574.0" y="190" text-anchor="middle">on failure the error goes back to the LLM · max 3 tries, set in the graph</text></svg></div>
+    <ul class="arch-facts"><li>Sandbox: no network, memory and CPU limits, 10 s timeout, one folder per run</li><li>Model fallback: gpt-oss-20b → gpt-oss-120b → qwen3.8-27b → gemini-3.1-flash-lite</li><li>API: POST /generate, /approve, /reject  ·  GET /status/{run_id}</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Pushing is never under LLM control.</strong> The LLM writes code; the app process does the push, and the GitHub token is never given to the sandbox.</li><li><strong>The retry limit lives in the graph.</strong> An attempts counter with a conditional edge, not a line in the prompt.</li><li><strong>Human approval is a real pause.</strong> interrupt and checkpointing hold the run until you decide; a run can be approved or rejected only once.</li><li><strong>Untrusted code stays isolated.</strong> Docker sandbox plus a secret scan before any push.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/ShipForge_AI" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-jobpilot-t" class="arch-dialog" id="arch-jobpilot">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-jobpilot-t">JobPilot AI: a tool-routing agent</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="JobPilot AI: a tool-routing agent architecture diagram" role="img" viewBox="-6 0 972 346" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-jobpilot" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><rect class="ar-box" x="12" y="150" width="170" height="92" rx="12"/><text class="ar-t" x="97.0" y="188" text-anchor="middle">Streamlit UI</text><text class="ar-s" x="97.0" y="212" text-anchor="middle">PDF upload + chat</text><rect class="ar-box acc" x="232" y="150" width="180" height="92" rx="12"/><text class="ar-t" x="322.0" y="182" text-anchor="middle">chat_node</text><text class="ar-s" x="322.0" y="205" text-anchor="middle">Groq LLM</text><text class="ar-s" x="322.0" y="223" text-anchor="middle">+ 3 tools</text><rect class="ar-box" x="482" y="150" width="150" height="92" rx="12"/><text class="ar-t" x="557.0" y="182" text-anchor="middle">tools node</text><text class="ar-s" x="557.0" y="205" text-anchor="middle">runs the</text><text class="ar-s" x="557.0" y="223" text-anchor="middle">chosen tool</text><rect class="ar-box" x="700" y="34" width="248" height="92" rx="12"/><text class="ar-t" x="824.0" y="72" text-anchor="middle">job_search</text><text class="ar-s" x="824.0" y="96" text-anchor="middle">Adzuna API · live jobs</text><rect class="ar-box" x="700" y="150" width="248" height="92" rx="12"/><text class="ar-t" x="824.0" y="188" text-anchor="middle">resume_search</text><text class="ar-s" x="824.0" y="212" text-anchor="middle">RAG over your resume PDF</text><rect class="ar-box" x="700" y="266" width="248" height="92" rx="12"/><text class="ar-t" x="824.0" y="304" text-anchor="middle">company_search</text><text class="ar-s" x="824.0" y="328" text-anchor="middle">DuckDuckGo · web research</text><path class="ar-l" d="M184 196 H230" marker-end="url(#ar-jobpilot)"/><path class="ar-l" d="M414 196 H480" marker-end="url(#ar-jobpilot)"/><path class="ar-l" d="M634 196 H664 V80 H698" marker-end="url(#ar-jobpilot)"/><path class="ar-l" d="M634 196 H698" marker-end="url(#ar-jobpilot)"/><path class="ar-l" d="M634 196 H664 V312 H698" marker-end="url(#ar-jobpilot)"/><path class="ar-l" d="M557 244 V274 Q557 286 545 286 H334 Q322 286 322 274 V248" marker-end="url(#ar-jobpilot)"/><text class="ar-n" x="440" y="320" text-anchor="middle">result goes back: the LLM reasons again or chains tools</text><path class="ar-l" d="M322 148 V116 Q322 104 310 104 H109 Q97 104 97 116 V146" marker-end="url(#ar-jobpilot)"/><text class="ar-n" x="210" y="86" text-anchor="middle">no tool needed: answer streams to the chat</text></svg></div>
+    <ul class="arch-facts"><li>Resume RAG: PDF → chunks → BAAI/bge-small embeddings → Chroma → top passages</li><li>Model: openai/gpt-oss-20b on Groq, orchestrated with LangGraph</li><li>Live: deployed on Streamlit Community Cloud</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>The LLM routes, the tools do the work.</strong> chat_node decides per query which tool(s) to call and loops until it has enough to answer.</li><li><strong>Answers are grounded in your resume.</strong> RAG over the uploaded PDF, so replies reflect your real skills and experience.</li><li><strong>Live data instead of model memory.</strong> Adzuna for current openings and DuckDuckGo for up-to-date company information.</li><li><strong>Responses stream.</strong> Answers appear token by token in the Streamlit chat.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/JobPilot_AI" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-medibot-t" class="arch-dialog" id="arch-medibot">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-medibot-t">MediBot: medical RAG assistant</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="MediBot: medical RAG assistant architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-medibot" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">INDEX (BUILT ONCE)</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="68" text-anchor="middle">Medical sources</text><text class="ar-s" x="107.0" y="91" text-anchor="middle">StatPearls pages</text><text class="ar-s" x="107.0" y="109" text-anchor="middle">and PDFs</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="68" text-anchor="middle">Chunking</text><text class="ar-s" x="353.0" y="91" text-anchor="middle">1000 chars</text><text class="ar-s" x="353.0" y="109" text-anchor="middle">100 overlap</text><rect class="ar-box" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="68" text-anchor="middle">Embeddings</text><text class="ar-s" x="599.0" y="91" text-anchor="middle">BGE-small</text><text class="ar-s" x="599.0" y="109" text-anchor="middle">runs locally</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="74" text-anchor="middle">FAISS index</text><text class="ar-s" x="845.0" y="98" text-anchor="middle">vector store</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-medibot)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-medibot)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-medibot)"/><text class="ar-lane" x="12" y="202" text-anchor="start">ANSWER (EVERY QUESTION)</text><rect class="ar-box" x="12" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="252" text-anchor="middle">Question</text><text class="ar-s" x="107.0" y="276" text-anchor="middle">Streamlit chat</text><rect class="ar-box acc" x="258" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="246" text-anchor="middle">MMR retrieval</text><text class="ar-s" x="353.0" y="269" text-anchor="middle">relevant, not</text><text class="ar-s" x="353.0" y="287" text-anchor="middle">repetitive</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">LCEL chain</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">prompt + Mistral AI</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="246" text-anchor="middle">Answer</text><text class="ar-s" x="845.0" y="269" text-anchor="middle">with source and</text><text class="ar-s" x="845.0" y="287" text-anchor="middle">passage snippet</text><path class="ar-l" d="M205 260.0 H255" marker-end="url(#ar-medibot)"/><path class="ar-l" d="M451 260.0 H501" marker-end="url(#ar-medibot)"/><path class="ar-l" d="M697 260.0 H747" marker-end="url(#ar-medibot)"/><path class="ar-l" d="M845.0 131 V159.0 Q845.0 171.0 833.0 171.0 H365.0 Q353.0 171.0 353.0 183.0 V211" marker-end="url(#ar-medibot)"/><text class="ar-n" x="599.0" y="162.0" text-anchor="middle">reads</text></svg></div>
+    <ul class="arch-facts"><li>Embeddings: BAAI/bge-small-en-v1.5, run locally</li><li>Splitter: RecursiveCharacterTextSplitter (1000 / 100 overlap)</li><li>Streamlit UI: cached model and index loading, multi-turn history</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Grounded, not remembered.</strong> Answers come from open-access NCBI StatPearls literature, not model memory.</li><li><strong>MMR retrieval.</strong> Returns relevant passages that are not redundant with each other.</li><li><strong>Every answer cites its source.</strong> Each response shows the source and the supporting passage.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/MediBot" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-gdai-t" class="arch-dialog" id="arch-gdai">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-gdai-t">GD.AI: group discussion simulator</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="GD.AI: group discussion simulator architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-gdai" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">SETUP AND DISCUSSION</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="74" text-anchor="middle">Topic</text><text class="ar-s" x="107.0" y="98" text-anchor="middle">generated by the LLM</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">Prep</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">60 seconds</text><rect class="ar-box acc" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="68" text-anchor="middle">Your turn</text><text class="ar-s" x="599.0" y="91" text-anchor="middle">graph pauses here</text><text class="ar-s" x="599.0" y="109" text-anchor="middle">voice or text</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="74" text-anchor="middle">Panelist 1</text><text class="ar-s" x="845.0" y="98" text-anchor="middle">AI participant</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-gdai)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-gdai)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-gdai)"/><text class="ar-lane" x="12" y="202" text-anchor="start">FINISH</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="252" text-anchor="middle">Panelist 2</text><text class="ar-s" x="845.0" y="276" text-anchor="middle">AI participant</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">Time check</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">5 minute discussion</text><rect class="ar-box acc" x="258" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="246" text-anchor="middle">Evaluator</text><text class="ar-s" x="353.0" y="269" text-anchor="middle">scores you</text><text class="ar-s" x="353.0" y="287" text-anchor="middle">with feedback</text><path class="ar-l" d="M747 260.0 H697" marker-end="url(#ar-gdai)"/><path class="ar-l" d="M501 260.0 H451" marker-end="url(#ar-gdai)"/><path class="ar-l" d="M845.0 131 V211" marker-end="url(#ar-gdai)"/><path class="ar-l" d="M599.0 211 V131" marker-end="url(#ar-gdai)"/><text class="ar-n" x="611.0" y="176.0" text-anchor="start">repeat until time is up</text></svg></div>
+    <ul class="arch-facts"><li>Stack: LangGraph, FastAPI, Mistral, vanilla JS frontend, browser Speech API for voice</li><li>Format: 60 s prep, 5 minute discussion, AI evaluator scores the student</li><li>Input: voice or text</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Human-in-the-loop.</strong> The LangGraph state machine pauses and resumes around each student turn.</li><li><strong>Two AI panelists.</strong> They discuss alongside you, so the practice feels like a real group round.</li><li><strong>Structured evaluation.</strong> An AI evaluator scores the discussion once the time is up.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/AI_Powered_GD_Simulator" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-deepresearch-t" class="arch-dialog" id="arch-deepresearch">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-deepresearch-t">Deep Research Agent: multi-agent pipeline</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="Deep Research Agent: multi-agent pipeline architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-deepresearch" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">FOUR SEQUENTIAL STAGES</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="74" text-anchor="middle">Search</text><text class="ar-s" x="107.0" y="98" text-anchor="middle">Tavily</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">Scrape</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">BeautifulSoup</text><rect class="ar-box" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="74" text-anchor="middle">Draft</text><text class="ar-s" x="599.0" y="98" text-anchor="middle">writer chain</text><rect class="ar-box acc" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="68" text-anchor="middle">Critique</text><text class="ar-s" x="845.0" y="91" text-anchor="middle">critic chain</text><text class="ar-s" x="845.0" y="109" text-anchor="middle">scores out of 10</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-deepresearch)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-deepresearch)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-deepresearch)"/><text class="ar-lane" x="12" y="202" text-anchor="start">OUTPUT</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="246" text-anchor="middle">Dashboard</text><text class="ar-s" x="845.0" y="269" text-anchor="middle">report, feedback,</text><text class="ar-s" x="845.0" y="287" text-anchor="middle">raw logs</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">Export</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">one-click Markdown</text><path class="ar-l" d="M747 260.0 H697" marker-end="url(#ar-deepresearch)"/><path class="ar-l" d="M845.0 131 V211" marker-end="url(#ar-deepresearch)"/></svg></div>
+    <ul class="arch-facts"><li>Writer chain: intro, findings, conclusion, sources</li><li>Critic chain: score out of 10 and areas to improve</li><li>Model: mistral-small via LangChain; UI on Streamlit</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>One agent or chain per stage.</strong> Each stage has a dedicated job, which keeps prompts focused.</li><li><strong>Self-critique.</strong> A separate critic scores the report and lists what to improve.</li><li><strong>Transparent.</strong> The dashboard exposes the raw search and scrape logs next to the final report.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/Deep_Research_Agent" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-devforge-t" class="arch-dialog" id="arch-devforge">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-devforge-t">DevForge AI (v1): a self-healing coding agent</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="DevForge AI (v1): a self-healing coding agent architecture diagram" role="img" viewBox="-6 0 972 354" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-devforge" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">AGENT LOOP (LANGGRAPH)</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="74" text-anchor="middle">Request</text><text class="ar-s" x="107.0" y="98" text-anchor="middle">Streamlit → FastAPI</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">write_code</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">LLM writes the program</text><rect class="ar-box acc" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="68" text-anchor="middle">execute_code</text><text class="ar-s" x="599.0" y="91" text-anchor="middle">subprocess</text><text class="ar-s" x="599.0" y="109" text-anchor="middle">10 s timeout</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="68" text-anchor="middle">check_result</text><text class="ar-s" x="845.0" y="91" text-anchor="middle">reads exit code</text><text class="ar-s" x="845.0" y="109" text-anchor="middle">and errors</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-devforge)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-devforge)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-devforge)"/><text class="ar-lane" x="12" y="238" text-anchor="start">WEBSITE REQUESTS</text><rect class="ar-box" x="258" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="288" text-anchor="middle">write_html_code</text><text class="ar-s" x="353.0" y="312" text-anchor="middle">builds the page</text><rect class="ar-box" x="504" y="250" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="288" text-anchor="middle">Live preview</text><text class="ar-s" x="599.0" y="312" text-anchor="middle">rendered in Streamlit</text><path class="ar-l" d="M451 296.0 H501" marker-end="url(#ar-devforge)"/><path class="ar-l" d="M308.0 131 V247" marker-end="url(#ar-devforge)"/><text class="ar-n" x="296.0" y="194.0" text-anchor="end">website request</text><path class="ar-l" d="M845.0 131 V152 Q845.0 164 833.0 164 H410.0 Q398.0 164 398.0 152 V132" marker-end="url(#ar-devforge)"/><text class="ar-n" x="621.5" y="190" text-anchor="middle">on error: fed back to the LLM, up to 3 retries</text></svg></div>
+    <ul class="arch-facts"><li>Four tools: write_code, execute_code, check_result, write_html_code, with conditional routing</li><li>Limits: 3 retries · recursion limit 15 · 10 s execution timeout</li><li>FastAPI endpoint with Pydantic validation, separate from the Streamlit UI</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Self-correcting.</strong> After each run the agent captures errors and exit codes and feeds them back to the LLM to fix the code.</li><li><strong>Python programs and websites.</strong> Plain-English requests become working code, or a single-file website with a live preview.</li><li><strong>Decoupled UI.</strong> The agent sits behind a FastAPI endpoint; Streamlit only displays code, output and errors.</li><li><strong>Superseded by ShipForge AI.</strong> The next version adds a Docker sandbox, a graph-enforced retry limit and human approval.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/DevForge_AI" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-buildmate-t" class="arch-dialog" id="arch-buildmate">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-buildmate-t">BuildMate AI: parallel multi-agent assistant</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="BuildMate AI: parallel multi-agent assistant architecture diagram" role="img" viewBox="-6 0 972 372" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-buildmate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><rect class="ar-box" x="12" y="150" width="170" height="92" rx="12"/><text class="ar-t" x="97.0" y="188" text-anchor="middle">Your idea</text><text class="ar-s" x="97.0" y="212" text-anchor="middle">one input</text><rect class="ar-box" x="270" y="34" width="230" height="92" rx="12"/><text class="ar-t" x="385.0" y="72" text-anchor="middle">Project ideas</text><text class="ar-s" x="385.0" y="96" text-anchor="middle">next-project ideas</text><rect class="ar-box" x="270" y="150" width="230" height="92" rx="12"/><text class="ar-t" x="385.0" y="188" text-anchor="middle">README</text><text class="ar-s" x="385.0" y="212" text-anchor="middle">ready-to-publish</text><rect class="ar-box" x="270" y="266" width="230" height="92" rx="12"/><text class="ar-t" x="385.0" y="304" text-anchor="middle">LinkedIn post</text><text class="ar-s" x="385.0" y="328" text-anchor="middle">announcement draft</text><rect class="ar-box acc" x="560" y="150" width="170" height="92" rx="12"/><text class="ar-t" x="645.0" y="182" text-anchor="middle">Custom reducer</text><text class="ar-s" x="645.0" y="205" text-anchor="middle">merges into one</text><text class="ar-s" x="645.0" y="223" text-anchor="middle">shared state</text><rect class="ar-box" x="790" y="150" width="158" height="92" rx="12"/><text class="ar-t" x="869.0" y="182" text-anchor="middle">Streamlit UI</text><text class="ar-s" x="869.0" y="205" text-anchor="middle">copy-ready</text><text class="ar-s" x="869.0" y="223" text-anchor="middle">outputs</text><path class="ar-l" d="M184 196 H220 V80 H268" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M184 196 H268" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M184 196 H220 V312 H268" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M502 80 H530 V196 H558" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M502 196 H558" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M502 312 H530 V196" marker-end="url(#ar-buildmate)"/><path class="ar-l" d="M732 196 H788" marker-end="url(#ar-buildmate)"/><text class="ar-n" x="385" y="22" text-anchor="middle">three agents run at the same time</text></svg></div>
+    <ul class="arch-facts"><li>LangGraph StateGraph with a fan-out / fan-in workflow</li><li>Model: Llama 3.3 70B Versatile on Groq (langchain-groq)</li><li>Live: deployed on Streamlit Community Cloud</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Parallel, not sequential.</strong> Three specialised agents work on the same input concurrently.</li><li><strong>A custom reducer merges the outputs.</strong> All three results land in one shared state dict.</li><li><strong>Copy-ready results.</strong> The UI shows each output ready to copy and publish.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/BuildMate_AI" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-zoro-t" class="arch-dialog" id="arch-zoro">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-zoro-t">Zoro Store Bot: customer support RAG</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="Zoro Store Bot: customer support RAG architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-zoro" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">KNOWLEDGE BASE (BUILT ONCE)</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="68" text-anchor="middle">Documents</text><text class="ar-s" x="107.0" y="91" text-anchor="middle">manuals, FAQs,</text><text class="ar-s" x="107.0" y="109" text-anchor="middle">policies (PDF)</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">Ticket history</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">support CSV</text><rect class="ar-box" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="74" text-anchor="middle">Embeddings</text><text class="ar-s" x="599.0" y="98" text-anchor="middle">Hugging Face</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="74" text-anchor="middle">ChromaDB</text><text class="ar-s" x="845.0" y="98" text-anchor="middle">vector database</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-zoro)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-zoro)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-zoro)"/><text class="ar-lane" x="12" y="202" text-anchor="start">ANSWER (EVERY QUESTION)</text><rect class="ar-box" x="12" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="252" text-anchor="middle">Question</text><text class="ar-s" x="107.0" y="276" text-anchor="middle">+ chat history</text><rect class="ar-box acc" x="258" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="246" text-anchor="middle">MMR retriever</text><text class="ar-s" x="353.0" y="269" text-anchor="middle">finds relevant</text><text class="ar-s" x="353.0" y="287" text-anchor="middle">documents</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">Prompt + Mistral</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">answers from context</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="252" text-anchor="middle">Response</text><text class="ar-s" x="845.0" y="276" text-anchor="middle">Streamlit chat</text><path class="ar-l" d="M205 260.0 H255" marker-end="url(#ar-zoro)"/><path class="ar-l" d="M451 260.0 H501" marker-end="url(#ar-zoro)"/><path class="ar-l" d="M697 260.0 H747" marker-end="url(#ar-zoro)"/><path class="ar-l" d="M845.0 131 V159.0 Q845.0 171.0 833.0 171.0 H365.0 Q353.0 171.0 353.0 183.0 V211" marker-end="url(#ar-zoro)"/><text class="ar-n" x="599.0" y="162.0" text-anchor="middle">reads</text></svg></div>
+    <ul class="arch-facts"><li>Sources: product manuals, FAQs, store policies, warranty info, support guides, ticket dataset</li><li>Phase 1 builds the vector database; app.py serves the Streamlit chat</li><li>Streamlit UI with cached models and conversation history</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Answers come from store documents.</strong> Responses are grounded in manuals, policies and past tickets.</li><li><strong>Two source types.</strong> PDF documents and a CSV ticket dataset feed the same knowledge base.</li><li><strong>MMR retrieval.</strong> Keeps the retrieved context relevant and varied.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/Zoro_Store_Customer_Support" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-patient-t" class="arch-dialog" id="arch-patient">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-patient-t">Patient Management API: FastAPI CRUD</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="Patient Management API: FastAPI CRUD architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-patient" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">REQUEST</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="74" text-anchor="middle">Client</text><text class="ar-s" x="107.0" y="98" text-anchor="middle">HTTP request</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">FastAPI routes</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">see list below</text><rect class="ar-box acc" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="74" text-anchor="middle">Pydantic</text><text class="ar-s" x="599.0" y="98" text-anchor="middle">validates the input</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="74" text-anchor="middle">Compute</text><text class="ar-s" x="845.0" y="98" text-anchor="middle">BMI + verdict</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-patient)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-patient)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-patient)"/><text class="ar-lane" x="12" y="202" text-anchor="start">STORAGE</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="252" text-anchor="middle">patients.json</text><text class="ar-s" x="845.0" y="276" text-anchor="middle">JSON file storage</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">Response</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">JSON to client</text><path class="ar-l" d="M747 260.0 H697" marker-end="url(#ar-patient)"/><path class="ar-l" d="M845.0 131 V211" marker-end="url(#ar-patient)"/></svg></div>
+    <ul class="arch-facts"><li>Routes: GET /view, /patient/{id}, /sort  ·  POST /create  ·  PUT /edit/{id}  ·  DELETE /delete/{id}</li><li>Computed fields: BMI and a health verdict, derived from height and weight</li><li>Persistence: a JSON file (no database)</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Validation at the edge.</strong> Pydantic models check age, height and weight before anything is stored.</li><li><strong>Derived data is computed.</strong> BMI and verdict are computed fields, not stored values.</li><li><strong>Built to learn FastAPI.</strong> A small project that covers the full CRUD cycle and sorting.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/Patient-Management-system-API-" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-fraud-t" class="arch-dialog" id="arch-fraud">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-fraud-t">Credit Card Fraud Detection: ML pipeline</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="Credit Card Fraud Detection: ML pipeline architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-fraud" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">PIPELINE</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="68" text-anchor="middle">Data</text><text class="ar-s" x="107.0" y="91" text-anchor="middle">10,000 transactions</text><text class="ar-s" x="107.0" y="109" text-anchor="middle">about 1.5% fraud</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="74" text-anchor="middle">Cleaning + EDA</text><text class="ar-s" x="353.0" y="98" text-anchor="middle">preprocessing</text><rect class="ar-box" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="74" text-anchor="middle">Features</text><text class="ar-s" x="599.0" y="98" text-anchor="middle">behavioral features</text><rect class="ar-box acc" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="68" text-anchor="middle">Models</text><text class="ar-s" x="845.0" y="91" text-anchor="middle">Logistic Regression</text><text class="ar-s" x="845.0" y="109" text-anchor="middle">Random Forest</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-fraud)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-fraud)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-fraud)"/><text class="ar-lane" x="12" y="202" text-anchor="start">EVALUATION</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="246" text-anchor="middle">Metrics</text><text class="ar-s" x="845.0" y="269" text-anchor="middle">accuracy, precision,</text><text class="ar-s" x="845.0" y="287" text-anchor="middle">recall, F1</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">Confusion matrix</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">where it goes wrong</text><rect class="ar-box" x="258" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="252" text-anchor="middle">Feature importance</text><text class="ar-s" x="353.0" y="276" text-anchor="middle">from Random Forest</text><path class="ar-l" d="M747 260.0 H697" marker-end="url(#ar-fraud)"/><path class="ar-l" d="M501 260.0 H451" marker-end="url(#ar-fraud)"/><path class="ar-l" d="M845.0 131 V211" marker-end="url(#ar-fraud)"/></svg></div>
+    <ul class="arch-facts"><li>Fraud is rare (about 1.5%), so accuracy alone is misleading; precision and recall matter</li><li>Notebook: fraud.ipynb on a 10,000-row CSV</li><li>Listed next steps: SMOTE, cross-validation, tuning, XGBoost / LightGBM</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Two models compared.</strong> Logistic Regression as a baseline against a Random Forest.</li><li><strong>More than accuracy.</strong> Evaluated with precision, recall, F1 and a confusion matrix.</li><li><strong>Explained.</strong> Feature importance shows which behavior signals drive the predictions.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/Credit-Card-Fraud-Detection" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
+  <dialog aria-labelledby="arch-heart-t" class="arch-dialog" id="arch-heart">
+    <div class="arch-head"><div><span class="arch-kicker">Architecture</span><h3 id="arch-heart-t">Heart Disease Predictor: explainable ML app</h3></div><button aria-label="Close" class="arch-close" type="button">&times;</button></div>
+    <div class="arch-scroll"><svg aria-label="Heart Disease Predictor: explainable ML app architecture diagram" role="img" viewBox="-6 0 972 318" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar-heart" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1 9 5 1 9z" class="ar-ah"/></marker></defs><text class="ar-lane" x="12" y="24" text-anchor="start">PIPELINE</text><rect class="ar-box" x="12" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="107.0" y="68" text-anchor="middle">Data</text><text class="ar-s" x="107.0" y="91" text-anchor="middle">5,000 clinical</text><text class="ar-s" x="107.0" y="109" text-anchor="middle">records</text><rect class="ar-box" x="258" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="353.0" y="68" text-anchor="middle">Preprocessing</text><text class="ar-s" x="353.0" y="91" text-anchor="middle">missing values,</text><text class="ar-s" x="353.0" y="109" text-anchor="middle">encoding, features</text><rect class="ar-box acc" x="504" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="68" text-anchor="middle">Compare 5 models</text><text class="ar-s" x="599.0" y="91" text-anchor="middle">RF, LR, SVM,</text><text class="ar-s" x="599.0" y="109" text-anchor="middle">XGBoost, ANN</text><rect class="ar-box" x="750" y="36" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="68" text-anchor="middle">Tuning</text><text class="ar-s" x="845.0" y="91" text-anchor="middle">RandomizedSearchCV</text><text class="ar-s" x="845.0" y="109" text-anchor="middle">5-fold CV</text><path class="ar-l" d="M205 82.0 H255" marker-end="url(#ar-heart)"/><path class="ar-l" d="M451 82.0 H501" marker-end="url(#ar-heart)"/><path class="ar-l" d="M697 82.0 H747" marker-end="url(#ar-heart)"/><text class="ar-lane" x="12" y="202" text-anchor="start">DEPLOYMENT</text><rect class="ar-box" x="750" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="845.0" y="252" text-anchor="middle">Streamlit app</text><text class="ar-s" x="845.0" y="276" text-anchor="middle">live on Streamlit</text><rect class="ar-box" x="504" y="214" width="190" height="92" rx="12"/><text class="ar-t" x="599.0" y="252" text-anchor="middle">SHAP</text><text class="ar-s" x="599.0" y="276" text-anchor="middle">explains predictions</text><path class="ar-l" d="M747 260.0 H697" marker-end="url(#ar-heart)"/><path class="ar-l" d="M845.0 131 V211" marker-end="url(#ar-heart)"/></svg></div>
+    <ul class="arch-facts"><li>Accuracy on the test set: Random Forest 84.24% · SVM 83.15% · ANN 82.07% · XGBoost 81.52%</li><li>Tuned Random Forest scored 81.52%, so the original model was kept</li><li>Handles missing values, feature engineering and encoding in one pipeline</li></ul>
+    <div class="arch-notes"><h4>Design decisions</h4><ul><li><strong>Chose generalisation over tuning.</strong> The untuned Random Forest beat the tuned one on the test set, so it was deployed.</li><li><strong>Explainable.</strong> SHAP shows why the model made each prediction.</li><li><strong>End to end.</strong> From raw clinical records to a deployed web app.</li></ul></div>
+    <a class="arch-link" href="https://github.com/Ishaan0901/heart-disease-predictor" rel="noopener" target="_blank">Read the README on GitHub →</a>
+  </dialog>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
